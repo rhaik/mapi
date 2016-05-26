@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.doubao.OrderProductMapper" >
+ <insert id="createOrderProductLottery" parameterType="java.util.List">
+ 	INSERT INTO `money_order_product_lottery` (`order_sn`, `user_id`, `product_activity_id`, `order_product_id`, `number`, `create_time`) VALUES
+ 	<foreach collection="list" item="item" index="index" separator="," >
+    (#{item.order_sn},#{item.user_id}, #{item.product_activity_id}, #{item.order_product_id}, #{item.number}, NOW())
+    </foreach>
+  </insert>
+</mapper>

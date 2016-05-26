@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<title>添加晒单</title> 
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/duobao.css">
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<body style="background:#fff;">
+
+<!-- <header class="header">
+     <a class="back back_text" href="javascript:history.back();">取消</a>
+     <span>晒单</span>
+     <a class="right_btn send_text" href="javascript:location.reload();">发送</a>
+ </header> -->
+
+
+<!-- 添加晒单 -->
+<div class="add_text">
+	<textarea onfocus="if(this.value=='您在一刻的想法...'){this.value=''};this.style.color='#333';" onblur="if(this.value==''||this.value=='您在一刻的想法...'){this.value=您在一刻的想法...)';this.style.color='#bababa';}">您在一刻的想法...</textarea>
+</div>
+
+<div class="add_img">
+	<ul class="clearfix">
+		<li><img src="../../images/duobao/images1.jpg" /><em>×</em></li>
+		<li><img src="../../images/duobao/add_img.png" /></li>
+		<!-- <span>添加照片</span> -->
+	</ul>
+</div>
+
+<div class="popup_bg dn">
+	<div class="add_img_list">
+		<div class="add_list">
+			<p>拍照</p>
+			<p>从手机相册选择</p>
+		</div>
+		<div class="add_list">
+			<p>取消</p>
+		</div>
+	</div>
+</div>
+
+</body> 
+</html> 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.UserIntegalIncomeMapper" >
+  
+  <insert id="insertOrUpdate" parameterType="com.cyhd.service.dao.po.UserIntegalIncome" >
+    insert into `money_user_integal_income` (`user_id`, `income`, `balance`, `exchange`, `source`,  `createtime`, 
+    	`updatetime`,estate,client_type) 
+    VALUES (#{user_id}, #{income}, #{balance}, #{exchange}, #{source}, now(), now(),#{estate},#{client_type}) on duplicate key 
+    update income=#{income},balance=#{balance}, exchange=#{exchange},client_type=#{client_type}
+  </insert>
+  
+  <select id="getIntegalByUserBysource" parameterType="int" resultType="com.cyhd.service.dao.po.UserIntegalIncome">
+    select * from money_user_integal_income where user_id=#{0} and source=#{1} 
+  </select>
+  
+  <select id="getIntegalByUser" parameterType="int" resultType="com.cyhd.service.dao.po.UserIntegalIncome">
+   	 select * from money_user_integal_income where user_id=#{0}
+  </select>
+  <update id="update" parameterType="com.cyhd.service.dao.po.UserIntegalIncome">
+  	 update `money_user_integal_income` set income=#{income},balance=#{balance}, client_type=#{client_type},exchange=#{exchange} where user_id=#{user_id}
+  	       and `source`=#{source}
+  </update>
+</mapper>

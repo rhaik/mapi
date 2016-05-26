@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.AppTaskMapper" >
+  
+  <insert id="addAppTask" parameterType="com.cyhd.service.dao.po.AppTask" keyProperty="id" useGeneratedKeys="true">
+    insert into `money_app_task` (`app_id`,`name`,`description`,`keywords`,`current_rank`,
+    	`target_rank`,`state`,`amount`,`start_time`,`end_time`,
+    	`show_end_time`,`createtime`,`duration`,`sort`,`task_type`,
+    	`total_task`,`current_task`,`received_task`,`total_received_task`,`total_completed_task`,
+    	`direct_reward`,`require_type`,`is_quick_task`,`ad_id`,`settlement_method`)
+     values (#{app_id},#{name},#{description},#{keywords},#{current_rank},#{target_rank},#{state},
+     #{amount},#{start_time},#{end_time},#{show_end_time},#{createtime}
+    ,#{duration},#{sort},#{task_type},#{total_task},#{current_task},#{received_task},
+     #{total_received_task},#{total_completed_task},#{direct_reward},#{require_type}
+     ,#{is_quick_task},#{ad_id},#{settlement_method})
+  </insert>
+ 
+ </mapper>

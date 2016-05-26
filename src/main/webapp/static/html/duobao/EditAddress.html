@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<title>收货地址</title> 
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/duobao.css">
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<body>
+<!-- 中间内容 -->   
+<div class="content_box">
+    <div class="edit edit_box">
+        <p><span>收货人</span><input type="text" placeholder="秒赚大钱" /></p>
+        <p><span>手机号码</span><input type="text" placeholder="13112345896" /></p>
+        <p><span>所在地区</span><input type="text" placeholder="北京 昌平" /></p>
+        <div class="address_ipt"><span>详细地址</span><textarea placeholder="北京市 北京市 朝阳区 望京SOHO T3 B 座 1201室" onpropertychange="this.style.height=this.scrollHeight+'px';" oninput="this.style.height=this.scrollHeight+'px';" style="overflow-y:hidden;"></textarea></div>
+    </div>
+    <div class="set clearfix">
+        <span>设为常用收货地址</span>
+        <em class="on"><a></a></em>
+    </div>
+</div>
+<!-- 底部按钮 -->
+<div class="posi_btn">
+    <a class="on">确定</a>
+</div>
+<script type="text/javascript">
+    $(".set em").on('click',function(){
+        if(!$(this).hasClass("on")){
+            $(this).addClass("on");
+        }else{ 
+            $(this).removeClass("on")
+        }
+    });
+    $('.right_btn').click(function(){
+        $('.popup_bg').show();
+    })
+    $('.cancel').click(function(){
+        $('.popup_bg').hide();
+    })
+    $('.confirm').click(function(){
+        window.location = "../duobao/AddressList.html";
+    })
+</script>
+</body> 
+</html> 

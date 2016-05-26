@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>提现记录</title> 
+	<!-- <link rel="stylesheet" type="text/css" href="../css/css.css"> -->
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<style type="text/css">
+		body{background:#fff;}
+		.prompt{font-size:1.1em; color:#000; text-align:center; line-height:1.6em; margin:5em 0 1em;}
+		.con_icon{width:15em; height:15em; margin:0 auto; background:url(../images/img/app_icon.png) no-repeat; background-size:cover;}
+		.popup_bg{width:100%; height:100%; background:rgba(0,0,0,.5); position:fixed; top:0;}
+		.install{width:100%; background:#fff; position:fixed; bottom:0;}
+		.install h1{font-size:1.2em; color:#ff8003; font-weight:normal; text-align:center; padding:1.4em 0 0.6em;}
+		.choose{border-top:1px solid #dcdcdc;}
+		.choose_txt{margin:0 2em 2em; background:#f9f9f9; border:1px solid #ececed; border-radius:6px; box-shadow:3px 3px 5px #f4f4f4; padding:1em; padding-bottom:2em;}
+		.choose_txt h2{font-size:1em; color:#999; font-weight:normal; text-align:center;}
+		.choose_txt p{font-size:0.83em; color:#999; text-align:center; line-height:1.5em;}
+		.choose_nav{position:absolute; bottom:0; left:0; border-top:1px solid #ececed; overflow:hidden; width:100%; height:1.68em; line-height:1.68em;}
+		.choose_nav li{width:50%; border-left:1px solid #ececed; float:left; margin-left:-1px; text-align:center;}
+		.container{margin:0 30px 1.7em;}
+		.choose_nav li a{display:block; font-size:0.9em; color:#999;}
+		.choose_nav li.on a{font-size:1.1em; color:#e5b280;}
+		.bar-unfill{height:15px; display:block; background:#bfbfbf; width:100%; border-radius:6px;}
+		.bar-fill{
+			width:100%;
+			height:15px; 
+			display:block; 
+			background:#ff8003; 
+		    border-radius:6px;
+		    -webkit-transition:width .3s ease;
+		    -moz-transition:width .3s ease;
+		    transition:width .3s ease;
+		    -webkit-animation:progressbar 3s 1;
+		    animation:progressbar 3s 1;
+		}
+		@-webkit-keyframes progressbar { 
+		    from {
+		        width:0
+		    }
+		    to {
+		        width:100%;
+		    }
+		} 
+		@keyframes progressbar {
+		    from {
+		        width:0 
+		    }
+		    to {
+		        width:100%
+		    }
+		}
+	</style>
+</head> 
+
+<body>
+<div>
+	<div class="prompt">如果您已下载赚大钱</br>请直接点击下面图标打开</div>
+	<div class="con_icon"></div>
+</div>
+<div class="popup_bg">
+	<div class="install">
+		<h1>安装中...</h1>
+		<div class="container">
+		    <div class="bar">
+		        <span class="bar-unfill">
+		            <span class="bar-fill"></span>
+		        </span>
+		     </div>
+		</div>
+		<div class="choose">
+			<h1>安装完成时记得点击“信任”</h1>
+			<div class="choose_txt posi_r">
+				<h2>不受信任的应用程序</h2>
+				<p>您信任开发者“iPhone Distributiong：Beijing creative Interactive NetworkTechnology Co.,Ltd.”并在iPhone上运行其应用吗？</p>
+				<ul class="choose_nav">
+					<li class="on"><a>信任</a></li>
+					<li><a>不信任</a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	
+</div>
+</body> 
+</html>

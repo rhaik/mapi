@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name = "format-detection" content="telephone = no" />
+	<title>秒赚大钱</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<style type="text/css">
+		.header{width:100%; height:44px; line-height:44px; text-align:center; background:#19191f; position:fixed; top:0; left:0; z-index:9999;}
+		.header span{font-size:18px; color:#fff; font-weight:bold;}
+		.header .back{width:14px; height:24px; display:block; position:absolute; top:0; left:0; padding:10px 15px;}
+		.header .right_btn{width:24px; height:24px; display:block; position:absolute; top:0; right:5px; padding:10px;}
+		.header img {vertical-align:top;}
+		#wrapper {margin-top:44px;}
+		#iframe {overflow-y:scroll !important; overflow-x:hidden !important; overflow:hidden; min-height:100%; min-width: 100%; width: 10px; *width: 100%; border:none;}
+	</style>
+</head> 
+<body>
+<header class="header">
+	<a class="back" href="javascript:history.back();"><img width="100%" src="../images/img/left_icon.png" /></a>
+	<span id="header-title"></span>
+	<a class="right_btn" href="javascript:location.reload();"><img width="100%" src="../images/img/refresh.png"  /></a>
+</header>
+<div id="wrapper">
+	<iframe id="iframe" src="javascript:;" frameBorder="0" width="100%" scrolling="yes"></iframe>
+</div>
+<script type="text/javascript" src="https://lib.sinaapp.com/js/zepto/1.0/zepto.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var loc = location.href;
+		var pos = location.href.indexOf('pg=');
+		var times = 0;
+		var frm = document.getElementById('iframe');
+
+		if(pos > 0){
+			var src = location.href.substring(pos + 3);
+			var url = decodeURIComponent(src);
+			if(typeof MiJSBridge=="object" || navigator.userAgent.indexOf('bigmoney') > 0) {
+				location.href = url;
+			}else{
+				frm.src = url + (url.indexOf('?') > 0 ? '&' : '?') + 'r=' + Math.random();
+				frm.onload = setTitle;
+			}
+		}
+
+		function setTitle(){
+			times += 1;
+			try{
+				$('#header-title').text(frm.contentWindow.document.title);
+				frm.height = frm.contentWindow.document.body.scrollHeight + "px";
+			}catch(e){
+				$('#header-title').text('秒赚大钱');
+				frm.height = (window.innerHeight - 44) + 'px';
+			}
+
+			if(times < 5 && !$('#header-title').text() ){
+				setTimeout(setTitle, 1000);
+			}
+		}
+	});
+</script>
+</body> 
+</html> 

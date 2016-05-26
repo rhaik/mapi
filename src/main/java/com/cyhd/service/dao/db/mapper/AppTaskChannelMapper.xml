@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.AppTaskChannelMapper" >
+
+  <insert id="addAppTaskChannel" parameterType="string" keyProperty="id" useGeneratedKeys="true" >
+    insert into `money_app_task_channel`(`task_id`,`app_channel_id`,`third_id`,`needReport`)
+    	 VALUES (#{task_id},#{app_channel_id},#{third_id},#{needReport})
+  </insert>
+ 
+ </mapper>

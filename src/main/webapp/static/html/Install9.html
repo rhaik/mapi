@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>安装</title> 
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.0.8/css/swiper.min.css">
+	<script src="https://cdn.bootcss.com/Swiper/3.0.8/js/swiper.min.js"></script>
+	<script type="text/javascript" src="https://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>
+	<script src="../js/download.js"></script>
+	<style type="text/css">
+		body{background:#fff;}
+		.logo img{width:3.75em; margin:1.8em auto 0.9em; display:block;}
+		.logo a{font-size:1.56em; color:#000; text-align:center; display:block;}
+		.logo p{font-size:1em; color:#ff8003; text-align:center; margin:1.8em 0;}
+		.step_btn{margin:0 1.25em 1.25em;}
+		.step_btn a.step1.on{}
+
+		
+		.bg2{width:100%; height:100%; background:rgba(0,0,0,.5); position:fixed; top:0; left:0;}
+		.popup,.main{width:90%; min-height:22em; margin:0 5%; background:#fff; border-radius:0.5em; display:inline-block; position:absolute; top:50%; margin-top:-11em; overflow:hidden;}
+		.popup em{width:5em; height:5em; display:block; margin:0 auto; padding:3em 0 2em;}
+		.popup p{font-size:1.1em; color:#000; padding:0 2em; line-height:1.5em; font-family:"微软雅黑";}
+		.pic_step{position:relative; height:19.5em;} 
+		.main_image{height:18em;position:relative;}
+		.main_image ul{width:100%;height:18em;overflow:hidden;position:absolute;top:0;left:0}
+		.main_image li{width:20em;height:18em;margin:0 auto;}
+		.main_image li img{display:block; margin:0 auto;}
+		.main_image li a{display:block;}
+
+		
+		.swiper-container,.swiper-wrapper{width:100%; margin-top:-10px;}
+	    .swiper-slide{width:100%;text-align:center; font-size:18px; -webkit-box-pack:center; -ms-flex-pack:center; -webkit-justify-content:center; justify-content:center; -webkit-box-align:center; -ms-flex-align:center;
+	        -webkit-align-items:center; align-items:center; float:left;}
+		.swiper-wrapper img{width:260px; display:block; margin:0 auto;}
+
+		.main_num{position:absolute;top:19em;left:50%;z-index:999;width:300px;height:21px;margin:0 0 0 -50px;}
+		.main_num a{float:left;width:0.4em;height:0.4em;display:inline-block;border:2px solid #666;border-radius:0.4em;margin:0 0.2em;background:#fff;}
+		.main_num a.on{background:#666;}
+		.set_btn{position:relative;}
+		/* .set{margin:2.2em 1.5em 0; background:#ff8003; border-radius:0.3em; height:3.5em; line-height:3.5em; text-align:center;}
+		.set a{font-size:1.25em; color:#fff; font-weight:bold;} */
+		.main b{font-weight:normal; font-size:1.8em; color:#999; position:absolute; z-index:9999; top:3px; right:10px;}
+
+
+		.last_btn{margin:5px 20px; height:2em; line-height:2em; border-radius:0.3em; display:none; background:#ff8003; font-size:1.1em; font-weight:bold; text-align:center; color:#fff; display:block;}
+		.main_finish{display: none;}
+		.main_tit h1{font-size:1.1em; font-weight:normal; padding:0.5em 0; text-align:center;}
+		.main_tit h1 i{font-style:normal; color:#ff8003;}
+		.container{margin:0 20px 1.7em;}
+		.choose_nav li a{display:block; font-size:0.9em; color:#999;}
+		.choose_nav li.on a{font-size:1.1em; color:#e5b280;}
+		.bar-unfill{height:10px; display:block; background:#bfbfbf; width:100%; border-radius:6px;}
+		.bar-fill{
+			width:100%;
+			height:10px; 
+			display:block; 
+			background:#ff8003; 
+		    border-radius:6px;
+		    -webkit-transition:width 10s ease;
+		    -moz-transition:width 10s ease;
+		    transition:width 10s ease;
+		    -webkit-animation:progressbar 10s 1;
+		    animation:progressbar 10s 1;
+		}
+		@-webkit-keyframes progressbar { 
+		    from {
+		        width:0
+		    }
+		    to {
+		        width:100%;
+		    }
+		} 
+		@keyframes progressbar {
+		    from {
+		        width:0 
+		    }
+		    to {
+		        width:100%
+		    }
+		}
+	</style>
+</head> 
+
+<body>
+
+<div class="bg2">
+	<div class="main">
+		<div class="main_tit">
+			<h1>"<i>秒赚大钱</i>"安装中...</h1>
+			<div class="container">
+			    <div class="bar">
+			        <span class="bar-unfill">
+			            <span class="bar-fill"></span>
+			        </span>
+			     </div>
+			</div>
+		</div>
+		<div style="padding:10px 0;" class="main_tit main_finish">
+			<h1>安装完成</h1>
+		</div>
+		<b>×</b>
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide"><img src="../images/img/img1.jpg"></div>
+	            <div class="swiper-slide"><img src="../images/img/img2.jpg"></div>
+	            <div class="swiper-slide"><img src="../images/img/img3.jpg"></div>
+	            <div class="swiper-slide"><img src="../images/img/img4.jpg"></div>
+	            <div class="swiper-slide"><img src="../images/img/img5.jpg"></div>
+	            <div class="swiper-slide"><img src="../images/img/img6.jpg"></div>
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination"></div>
+	    </div>
+		<div class="last_btn" id="cert-btn">前往企业证书</div>
+	</div>
+</div>
+
+<div class="box">
+	<div class="logo">
+		<img src="../images/img/logo.png" />
+		<a>秒赚大钱</a>
+		<p>按顺序完成下载安装开始体验赚钱之旅吧</p>
+	</div>
+	<div class="step">
+		<div class="step_btn"><a class="step1"><img src="../images/img/one_tep.png" /></a></div>
+		<div class="step_btn"><a class="step1_finish dn"><img src="../images/img/one_finish.png" /></a></div>
+		<div class="step_btn"><a class="step2"><img src="../images/img/two_tep.png" /></a></div>
+		<div class="step_btn"><a class="step3"><img src="../images/img/three.png" /></a></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+    $(".step .step_btn .step1").click(function(){
+    	window.location = "/www/downloads/url";
+    });
+
+    $('#cert-btn').click(function(){
+		window.location = "prefs:root=General&path=ManagedConfigurationList";
+    });
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        loop: true,
+        paginationClickable: true,
+        autoplay: 1500,
+        loopAdditionalSlides : 1
+    });
+</script>
+</body> 
+</html>

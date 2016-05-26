@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>常见问题</title> 
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	
+	<style type="text/css">
+		body{background:#fff;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;color:#000;margin:0;padding:0;}
+		.question{background:#f0eff5; padding:20px 0;}
+		.list{background:#fff; border-top:1px solid #dcdcdc; border-bottom:1px solid #dcdcdc; padding-left:20px;}
+		.list a{font-size:17px; color:#000; text-align:left; border-bottom:1px solid #dcdcdc; margin:0; line-height:45px; position:relative; display:block;}
+		.list a:last-child{border-bottom:none;}
+		.list a em{width:10px; height:14px; position:absolute; top:50%; right:20px; margin-top:-7px; background:url(../../images/img/right_ico.png) 0 0 / 100% 100% no-repeat;}
+		.contact{border-top:1px solid #dcdcdc; padding:50px 20px 0 45px;}
+		.contact_icon{width: 16px; height: 16px; float: left; background:url(../../images/img/contact_icon.png) 0 0 / 100% 100% no-repeat; margin:4px 0 0 -25px;}
+		.contact_way{font-size:15px; color: #000; line-height:25px;}
+		.contact_way i{color: #ff8003; font-style: normal;}
+	</style>
+</head> 
+<body> 
+<div class="question">
+	<div class="list">
+		<a name="isAndroidHide" style="display:none;" data-url="/static/html/ProblemRemen.html">热门问题<em></em></a>
+		<a name="isAndroidShow" style="display:none;" data-url="/static/html/ProblemRemenAndroid.html">热门问题<em></em></a>
+		<a name="isAndroidHide" style="display:none;" data-url="/static/html/ProblemXianshi.html">限时任务<em></em></a>
+		<a data-url="/static/html/ProblemZhuanfa.html">转发任务<em></em></a>
+		<a data-url="/static/html/ProblemGengxin.html">任务更新<em></em></a>
+		<a data-url="/static/html/ProblemShoutu.html">收徒<em></em></a>
+		<a data-url="/static/html/ProblemTixian.html">提现打款<em></em></a>
+		<a name="isAndroidHide" style="display:none;" data-url="/static/html/ProblemRemen.html">其他问题<em></em></a>
+		<a name="isAndroidShow" style="display:none;" data-url="/static/html/ProblemOtherAndroid.html">其他问题<em></em></a>
+	</div>
+</div>
+<div class="contact">
+	<div class="contact_icon"></div>
+	<div class="contact_way">如您的问题不在常见问题中，请<span id="showwx">在微信中搜索“<i>秒赚大钱</i>”或“<i>la6680</i>”， 关注第一个，</span>联系客服咨询。</div>
+</div>
+<script src="https://lib.sinaapp.com/js/zepto/1.0/zepto.min.js"></script>
+<script>
+function isWeixin(){
+	var u = navigator.userAgent;
+	return u.indexOf('MicroMessenger') > -1;
+}
+function isAndroid(){
+	var u = navigator.userAgent;
+	return u.indexOf('Android') > -1;
+}
+
+
+$(function(){
+	if(isWeixin()){
+		$("#showwx").hide();
+	}
+	if(isAndroid()){
+		$("a[name=isAndroidHide]").hide();
+		$("a[name=isAndroidShow]").show();
+	}else {
+		$("a[name=isAndroidHide]").show();
+		$("a[name=isAndroidShow]").hide();
+	}
+
+
+	$('.list>a').click(function(){
+		var url = $(this).data('url') + "";
+		if($(this).data('url')==null) return ;
+		if(typeof MiJSBridge=="object") {
+			MiJSBridge.call("open", {url: url});
+		} else {
+			window.location.href= url;
+		}
+	});
+});
+
+</script>
+</body>
+</html> 

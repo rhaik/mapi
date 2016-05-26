@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name = "format-detection" content="telephone = no" />
+	<title>绑定手机号</title> 
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	
+	<style type="text/css">
+		body{background:#f0eff5;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;color:#000;margin:0;padding:0;}
+		.test h1{font-size:16px; color:#000; text-align:center; font-weight:normal; padding:15px 0;}
+		.ipt_text{background:#fff; border-top:1px solid #dcdcdc; border-bottom:1px solid #dcdcdc; padding-left:10px;}
+		.ipt_text input{font-size:16px; color:#999; border:none; outline:none; line-height:45px;} 
+		.ipt_text input::-webkit-input-placeholder {color:#CFCFCF;}
+		.ipt_text span{background:#ff8003; width:100px; display:block; font-size:12px; color:#fff; border-radius:3px; float:right; margin:8px 10px 0 0; line-height:29px; text-align:center;}
+		.ipt_text .ipt_num{ border-bottom:1px solid #dcdcdc;}
+		.mobile_phone{margin:10px; background:#ff8003; line-height:45px; text-align:center; border-radius:5px;}
+		.mobile_phone a{font-size:16px; color:#fff; display:block;}
+	</style>
+</head> 
+<body> 
+<div class="test">
+	<h1>当前手机号码：13800138000</h1>
+	<div class="ipt_text">
+		<div class="ipt_num">
+			<input type="text" placeholder="请输入手机号" />
+			<span id="btn">获取语音验证码</span>
+		</div>
+		<div class="ipt_yam"><input type="text" placeholder="请输入验证码" /></div>
+	</div>
+	<div class="mobile_phone">
+		<a>验证后绑定手机</a>
+	</div>
+</div>
+<script type="text/javascript"> 
+	var countdown=60;
+	function time(val) {
+        if (countdown == 0) {
+        	val.style.background="#ff8003";
+            val.removeAttribute("disabled");            
+            val.innerHTML="免费获取验证码";
+            countdown = 60;
+        } else { 
+        	val.style.background="#ddd";
+            val.setAttribute("disabled", true);
+            val.innerHTML="重新发送(" + countdown + ")";
+            countdown--;
+            setTimeout(function() {
+                time(val)
+            },
+            1000)
+        }
+    }
+	document.getElementById("btn").onclick=function(){time(this);}
+</script> 
+</body> 
+</html> 

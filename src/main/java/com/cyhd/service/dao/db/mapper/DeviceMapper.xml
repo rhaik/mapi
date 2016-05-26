@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyhd.service.dao.db.mapper.DeviceMapper" >
+   
+   <select id="getDeviceById"  parameterType="long" resultType="deviceDo">
+        select * from device where id=#{id} and estate=1
+   </select>
+   
+   <select id="getDevicesByUserId"  parameterType="long" resultType="deviceDo">
+        select * from device where userid=#{userid} order by updatetime desc
+   </select>
+   
+   <select id="existDevice" resultType="deviceDo">
+        select * from device where userid=#{0} and token=#{1} and estate=1
+   </select>
+   
+   <select id="getDeviceByToken" parameterType="String" resultType="deviceDo">
+        select * from device where token=#{token} limit 1
+   </select>
+   
+   <insert id="add" parameterType="deviceDo">
+        insert into device(id,estate,userid,token,devicetype, tokentype, devicemodel,appver, cityid,createtime,updatetime,bundle_id) values
+            (#{id}, #{estate}, #{userid}, #{token}, #{devicetype},#{tokentype}, #{devicemodel}, #{appver}, #{cityid},  #{createtime}, #{updatetime}, #{bundle_id}) on duplicate key update
+            userid=#{userid},token=#{token},estate=#{estate},devicetype=#{devicetype}, tokentype=#{tokentype}, devicemodel=#{devicemodel}, appver=#{appver}, updatetime=now(), bundle_id=#{bundle_id}
+    </insert>
+    
+    <update id="update" parameterType="deviceDo">
+        update device set estate=#{estate}, userid=#{userid},token=#{token}, cityid=#{cityid}, devicetype=#{devicetype},
+        devicemodel=#{devicemodel}, appver=#{appver}, updatetime=#{updatetime} 
+        where id=#{id}
+    </update>
+    
+    <select id="getAllDevices" resultType="String">
+         select distinct(token) from device where estate=1
+    </select>
+   
+    <update id="updateCityId">
+        update device set cityid=#{1}, updatetime=#{2} where token=#{0}
+    </update>
+    <select id="getDeviceByTokenAndType" resultType="deviceDo">
+        select * from device where token=#{0} and devicetype=#{1} and estate=1
+    </select>
+    <update id="delete">
+        update device set estate=2, updatetime=#{1} where id = #{0};
+    </update>
+    
+    <select id="getDevicesByParam"  parameterType="map" resultType="deviceDo">
+         select * from device 
+           <where>
+                estate=1
+                <if test="userid!=null and userid!=0"> 
+		            and userid=#{userid} 
+		        </if> 
+                <if test="cityid!=null and cityid!=0"> 
+		            and cityid=#{cityid} 
+		        </if>
+           </where>
+    </select>
+    
+    <update id="unbind" parameterType="string">
+        update device set estate=2, updatetime=now() where token=#{0}
+    </update>
+    
+    <delete id="clearByUserOrToken" parameterType="string">
+        delete from device where token=#{1} or userid=#{0}
+    </delete>
+    
+     <delete id="clearByUser" parameterType="long">
+        delete from device where userid=#{0}
+    </delete>
+    
+      <delete id="clearByToken" parameterType="string">
+        delete from device where token=#{0}
+    </delete>
+    
+    <select id="countTotal" resultType="int">
+    	SELECT COUNT(DISTINCT userid) FROM device where estate=1 and userid != 0
+    </select>
+    
+    <select id="getAllUserId" parameterType="int" resultType="long">
+    	SELECT DISTINCT userid FROM device  where estate=1 and userid != 0 order by id desc LIMIT  #{0},#{1} 
+    </select>
+    
+    <select id="getAllUserIdAndId" parameterType="int" resultType="com.cyhd.common.util.Pair">
+    	SELECT  id as first, userid as second FROM device where estate=1 and userid != 0 LIMIT #{0},#{1}
+    </select>
+    
+    <select id="getUserIdsByDeviceType" parameterType="int" resultType="long">
+    	SELECT userid FROM device where userid != 0 and estate=1 and devicetype=#{0} order by createtime desc LIMIT #{1},#{2}
+    </select>
+    
+    <select id="getUserIdsByDeviceTypeAndAppId" parameterType="int" resultType="long">
+    	select userid from device where userid !=0 and estate=1 and devicetype=#{0} and userid not in (select user_id from money_user_task where app_id=#{1}) order by createtime desc LIMIT #{2},#{3}
+    </select>
+    
+    
+</mapper>

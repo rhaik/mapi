@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name = "format-detection" content="telephone = no" />
+	<title>收徒记录</title> 
+</head> 
+<style>
+	.ui-tab{background-color:#fff;}
+	.ui-page, #fpmxListPageFrist{margin-top:47px;}
+	.ui-list{margin-bottom:0px;}
+	.ui-tab-nav li{font-size:16px;}
+	.ui-tab-nav li.current {color: #fff;border:1px #0080fd solid;background-color:#0080fd}
+	.ui-list>.ui-form-item-link{position: relative;display: -webkit-box; }
+	.ui-form-item-link{margin-left:20px;}
+	.ui-list-info>h4 {color:#000;width: 120px;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;word-wrap:normal;line-height: 45px; margin: 0; float:left;}
+	.ui-list-info span{width:20px;height:20px;background-size:100%;background-repeat:no-repeat;display:inline-block;}
+	.ui-list-date{line-height:26px;background-color:#f0eff5;}
+	.ui-list-date span{margin-left:14px;color:#777777;font-size:14px;}
+	.ui-list-thumb{width:45px;height:45px;margin: 10px 10px 10px 0;}
+	.ui-list-action {margin-right:16px;color:#666666}
+	.nodata{margin:0 auto;text-align:center;margin:16px 0px;font-size:16px;}
+
+	.master{background:#f2f2f2; border-bottom:1px solid #dcdcdc; padding:20px 15px; position: relative; overflow:hidden; padding-left: 70px;}
+	.master_pic span{width:45px; height:45px; display:block; border-radius:5px; background:#000; float:left; margin-left:-50px;}
+	.infor{width:100%; overflow:hidden;}
+	.infor h4{float:left; font-size:17px; line-height:45px; color:#000; font-weight:normal; float:left; margin:0 5px;}
+	.infor em{float:right; font-size:14px; line-height:45px; color:#000; font-style:normal;}
+	.master span.corner{width:40px; height:40px; display:block; position:absolute; left:0; top:0; overflow:hidden;}
+	.master_box{background:#fff; border-top:1px solid #dcdcdc; border-bottom:1px solid #dcdcdc;}
+	.master_box .master{background:#fff; padding:10px 10px 10px 50px; margin-left:20px;}
+	.master_box .master:last-child{border:none;}
+	.master_box .master .master_pic span{margin-left:-50px; border-bottom:1px solid #dcdcdc;}
+</style>
+
+
+<div data-role="page" id="fpmxListPageFrist" data-iscroll="enable">
+	<div data-role="content">
+		<div id="wrapperIndex" class="wrapper" >
+			<div id="scrollerIndex" class="scroller">
+				<div id="pullDown" style="display:none;">
+					<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+				</div>
+				<div id="fpmxList" data-role="listview">
+					<div class="ui-list ui-border-tb">
+						<div class="master">
+							<div class="master_pic">
+								<span><img width="100%" src="../images/img/personal_img.jpg" /></span>
+							</div>
+							<div class="infor">
+								<h4>xiaopingping</h4>
+								<em>13:42</em>
+							</div>
+							<span class="corner"><img width="100%" src="../images/img/master.png" /></span>
+						</div>
+						<div class="ui-list-date ui-border-tb" style="margin-left:0px;" data-date="${user.userIncomeLog.operator_time?string("yyyy年MM月dd日")}">
+							<span>${user.userIncomeLog.operator_time?string("yyyy年MM月dd日")}</span>
+						</div>
+						<div class="master_box">
+						    <div class="master">
+								<div class="master_pic">
+									<span><img width="100%" src="../images/img/personal_img.jpg" /></span>
+								</div>
+								<div class="infor">
+									<h4>xiaopingping</h4>
+									<em>13:42</em>
+								</div>
+							</div>
+							<div class="master">
+								<div class="master_pic">
+									<span><img width="100%" src="../images/img/personal_img.jpg" /></span>
+								</div>
+								<div class="infor">
+									<h4>xiaopingping</h4>
+									<em>13:42</em>
+								</div>
+							</div>
+							<div class="master">
+								<div class="master_pic">
+									<span><img width="100%" src="../images/img/personal_img.jpg" /></span>
+								</div>
+								<div class="infor">
+									<h4>xiaopingping</h4>
+									<em>13:42</em>
+								</div>
+							</div>
+					    </div>
+					</div>
+						<div class="nodata">无数据记录</div>
+				</div> 
+				<div id="pullUp">
+					<span class="pullUpLabel">上拉加载更多...</span>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

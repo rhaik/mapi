@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.AutoCallRecordMapper" >
+  
+  
+  <insert id="insert" parameterType="autoCallRecordDo" >
+    insert into `autocall_record` (`id`, `type`, `resourceid`, `extrainfo`, `content`, `callstate`, `createtime`, `calltime`, `callcount`, 
+    	`replytime`, `replykey`, `phone`, `subphone`, `oprid`) 
+    VALUES (#{id}, #{type}, #{resourceid}, #{extrainfo}, #{content}, #{callstate}, #{createtime}, NULL, #{callcount}, NULL, NULL, #{phone},#{subphone}, #{oprid}) on duplicate key 
+    update extrainfo=#{extrainfo},content=#{content}, callstate=#{callstate},callcount= callcount+1, calltime=NULL, replytime=NULL, replykey=NULL, oprid=#{oprid}, phone=#{phone}, subphone=#{subphone}
+  </insert>
+  
+  <update id="afterCall" parameterType="autoCallRecordDo" >
+    update autocall_record set callstate=#{callstate}, calltime=#{calltime} where id=#{id}
+  </update>
+  
+  <update id="startReply" parameterType="autoCallRecordDo" >
+    update autocall_record set callstate=#{callstate}, replykey=#{replykey}, replytime=#{replytime} where id=#{id}
+  </update>
+  
+  <update id="endReply" parameterType="autoCallRecordDo" >
+    update autocall_record set replyendtime=#{replyendtime}, endreason=#{endreason}, callstatus=#{callstatus} where id=#{id}
+  </update>
+  
+  <select id="getCallRecord" parameterType="int" resultType="autoCallRecordDo">
+  	select id, type, resourceid, extrainfo, content, callstate, createtime, calltime, callcount, replytime, 
+  		replykey, phone, subphone, oprid, replyendtime, endreason, callstatus
+  		from autocall_record where id=#{value}
+  </select>
+  
+  <select id="getCallRecordByResource" parameterType="long" resultType="autoCallRecordDo">
+  	select id, type, resourceid, extrainfo, content, callstate, createtime, calltime, callcount, replytime, 
+  		replykey, phone, subphone, oprid, replyendtime, endreason, callstatus
+  		from autocall_record where resourceid=#{0} and type=#{1}
+  </select>
+  
+</mapper>

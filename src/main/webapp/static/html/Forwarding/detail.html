@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>秒赚大钱</title>
+    <link href="//cdn.bootcss.com/FrozenUI/1.2.1/css/frozen.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/xianshi.css">
+    <style>
+        .header{width:100%; height:44px; line-height:44px; text-align:center; background:#19191f; position:fixed; top:0; left:0; z-index:9999;}
+        .header span{font-size:18px; color:#fff; font-weight:bold;}
+        .header .back{width:14px; height:24px; display:block; position:absolute; top:0; left:0; padding:10px 15px;}
+        .header .right_btn{width:24px; height:24px; display:block; position:absolute; top:0; right:5px; padding:10px;}
+        .header img {vertical-align:top;}
+        #wrapper {margin-top:44px;}
+        .ui-poptips {top:44px;}
+    </style>
+    <script src="//lib.sinaapp.com/js/zepto/1.0/zepto.min.js"></script>
+</head>
+<body class="bg_f">
+<header class="header">
+    <a class="back" href="javascript:history.back();"  ><img width="100%" src="../../images/img/left_icon.png" /></a>
+    <span>多听FM</span>
+    <a class="right_btn" href="javascript:location.reload();"  ><img width="100%" src="../../images/img/refresh.png" /></a>
+</header>
+<div id="wrapper">
+    <div class="content">
+        <ul class="ui-list ui-list-function ui-border-b">
+            <li class="tips">
+                <div class="ui-list-info">
+                    <p>完成奖励<span>2</span>元</p>
+                </div>
+                <div class="ui-list-thumb"><span class="tips-icon"></span></div>
+            </li>
+            <li style="background-color: #f0eff5;height:14px;"></li>
+            <li class="ui-border-tb">
+                <div class="ui-list-thumb">
+                    <span style="background-image:url(http://a2.mzstatic.com/us/r30/Purple69/v4/92/46/9b/92469b67-b69f-3769-eb5e-6463c28ad627/icon200x200.png);border-radius:12px;"></span>
+                </div>
+                <div class="ui-list-info">
+                    <h4>多听FM</h4>
+                    <div class="ui-li-description">
+                        <span class="ui-li-fileszie">47.8 M</span>
+                        <span class="ui-li-taskimg">请在<span>60分钟</span>内完成任务</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="ui-list ui-border-tb">
+            <li>
+                <div class="ui-list-info">
+                    <p class="ui-li-first">第一步</p>
+                </div>
+                <!--
+                <div class="ui-list-right">
+                    <button class="ui-btn" id="btn-copy">复制</button>
+                </div> -->
+            </li>
+            <li class="ui-border-b">
+                <div class="ui-list-info">
+                    <div class="ui-li-bz">长按虚线框，复制关键词“多听FM”</div>
+                    <div id="copy-area"><div id="keyword"><span id="word">多听FM</span></div></div>
+                </div>
+            </li>
+
+            <li>
+                <div class="ui-list-info">
+                    <p class="ui-li－second">第二步</p>
+                </div>
+                <div class="ui-list-right">
+                    <button class="ui-btn" id="btn-seach">搜索下载</button>
+                </div>
+            </li>
+            <li>
+                <div class="ui-list-info">
+                    <div class="ui-li-bz">到AppStore搜索“多听FM”，找到该图标并下载</div>
+                    <p style="text-align:center;"><img src="../../images/task_14.png" alt="搜索" style="width:60%;"/></p>
+                </div>
+            </li>
+            <li>
+                <div class="ui-list-center">
+                    <span class="ui-list-icon" style="background-image:url(http://a2.mzstatic.com/us/r30/Purple69/v4/92/46/9b/92469b67-b69f-3769-eb5e-6463c28ad627/icon200x200.png);"></span><span>图标在第<i>1</i>个左右</span>
+                </div>
+            </li>
+            <li class="ui-border-t" style="margin-top:12px;">
+                <div class="ui-list-info">
+                    <p class="ui-li－thrid">第三步</p>
+                </div>
+                <div class="ui-list-right">
+                    <button class="ui-btn disabled" id="btn-open">打开试玩</button>
+                </div>
+            </li>
+            <li class="ui-border-b">
+                <div class="ui-list-info"><div class="ui-li-bz">打开应用并试玩3分钟</div></div>
+            </li>
+        </ul>
+    </div>
+    <div class="ui-dialog ui-dialog-accpet">
+        <div class="ui-dialog-cnt">
+            <div class="ui-dialog-bd">
+                <h1>参与任务赢取<i>2</i>元奖励</h1>
+                <div class="ui-btn-wrap">
+                    <button id="accpet" class="ui-btn ui-btn-danger">立即参加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui-dialog ui-dialog-info">
+        <div class="ui-dialog-cnt">
+            <div class="ui-dialog-bd">
+                <h3>温馨提示</h3>
+                <div class="info-tips">
+                    <p>1.您的身份＝唯一微信+唯一设备号+唯一手机号+唯一苹果账号</p>
+                    <p>2.不能使用他人的苹果账号下载</p>
+                    <p>3.试用完成，发放奖励需等待几分钟，请耐心等待</p>
+                </div>
+                <div class="ui-btn-wrap">
+                    <button id="ui-dialog-yes" class="ui-btn ui-btn-danger">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-dialog ui-dialog-status">
+        <div class="ui-dialog-cnt">
+            <div class="ui-dialog-bd">
+                <h3>未开始</h3>
+                <div class="ui-btn-wrap" style="margin-top:16px;">
+                    <button id="reopen-app" class="ui-btn ui-btn-danger" style="display:none;margin-bottom:8px;">继续打开试玩</button>
+                    <button class="ui-btn ui-btn-danger goBack">返回限时任务</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui-dialog ui-dialog-open show">
+        <div class="ui-dialog-cnt">
+            <div class="ui-dialog-bd">
+                <h1>点击按钮打开试玩(必须)</h1>
+                <div class="info-tips">首次打开会比较慢，请耐心等待</div>
+                <div class="ui-btn-wrap">
+                    <button id="open-app" class="ui-btn ui-btn-danger">立即打开试玩</button>
+                    <button id="finish-task" class="ui-btn ui-btn-danger" style="margin-top:8px;">检查完成状态</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-dialog" id="ui-dialog">
+        <div class="ui-dialog-cnt">
+            <div class="ui-dialog-bd">
+                <h1 id="ui-dialog-title"></h1>
+                <div class="ui-btn-wrap">
+                    <button id="ui-dialog-btn" class="ui-btn ui-btn-danger"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

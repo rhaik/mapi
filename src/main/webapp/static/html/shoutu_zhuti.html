@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name = "format-detection" content="telephone = no" />
+	<title>主题收徒</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.0.8/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script type="text/javascript" src="https://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>
+</head> 
+<style type="text/css">
+	.swiper-container_zhuti{width:100%;padding:80px 0 30px;}
+	.swiper-container_zhuti .swiper-slide{background-position:center; width:245px; height:360px; border-radius:10px; overflow:hidden;}
+	.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right{background:none;}
+	.swiper-container_zhuti .swiper-slide img{width:100%;}
+	.zhuti_text{font-size:14px; color:#666; text-align:center;}
+</style>
+<body> 
+<div class="center_box">
+	<header class="header">
+		<a class="back"><img width="100%" src="../images/img/left_icon.png" /></a>
+		<span>收徒</span>
+	</header>
+	<div class="swiper-container swiper-container_zhuti">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="../images/img/zhuti01.jpg" /></div>
+			<div class="swiper-slide"><img src="../images/img/zhuti02.jpg" /></div>
+			<div class="swiper-slide"><img src="../images/img/zhuti03.jpg" /></div>
+			<div class="swiper-slide"><img src="../images/img/zhuti05.jpg" /></div>
+			<div class="swiper-slide"><img src="../images/img/zhuti06.jpg" /></div>
+			<div class="swiper-slide"><img src="../images/img/zhuti07.jpg" /></div>
+			<div class="swiper-slide"><img src="../images/img/zhuti08.jpg" /></div>
+			<div class="swiper-slide"><img src="../images/img/zhuti09.jpg" /></div>
+		</div>
+	</div>
+	<div class="zhuti_text">长按图片选择存储图像<br/>发给好友一起秒赚大钱</div>
+</div>
+<script src="https://cdn.bootcss.com/Swiper/3.0.8/js/swiper.min.js"></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container_zhuti', {
+        loopedSlides:3,
+        slidesPerView: 'auto',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        loop:true,
+        coverflow: {
+            rotate: 40,
+            stretch: -15,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+        }
+    });
+</script>
+</body> 
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name = "format-detection" content="telephone = no" />
+	<title>绑定手机号</title> 
+	
+	<style type="text/css">
+		body{background:#f0eff5;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;color:#000;margin:0;padding:0;}
+		.bill_box em{font-size: 12px; line-height: 16px; color: #000; display: none; font-style: normal;}
+		.bill_list{padding: 0 15px; height: 78px; background: #fff; margin-top: 20px; overflow: hidden;}
+		.bill_num{width: 100%; line-height: 25px; margin-top:20px; font-size: 17px; color: #000; border: none; outline: none;}
+		.bill_num::-webkit-input-placeholder{color: #ff8003;}
+		.yzm{margin: 20px 0 0; overflow: hidden;}
+		.bill_yzm{width:63%; height: 17px; line-height: 17px; padding: 20px 0; float: left; font-size: 17px; color: #000; border: none; outline: none; text-indent: 15px;}
+		.bill_yzm::-webkit-input-placeholder{color: #aaa;}
+		.yzm_pic{width: 27%; height: 57px; float: left; display: block; background: #fff; margin-left: 4%; overflow: hidden;}
+		.yzm_pic em{width: 100%; height: 40px; display: block;}
+		.yzm_pic a{font-size: 12px; color: #ff8003; text-align: center; display: block;}
+		.amount{ margin: 20px 15px 0; overflow: hidden; padding-left: 0;}
+		.amount li{width: 30%; height: 65px; border: 1px solid #ddd; display: block; float: left; background: #fff; margin-right: 3.4%; margin-top: 15px; overflow: hidden;}
+		.amount li a{display: block; height: 65px; line-height: 65px; text-align: center; font-size: 18px; color: #aaa;}
+		.amount li span{display: none; font-size: 12px; color: #aaa; text-align: center;}
+		.amount li:nth-child(3n){margin-right: 0;}
+		.bill_btn{margin: 35px 15px;}
+		.bill_btn a{display: block; background: #fdaf62; line-height: 45px; text-align: center; border-radius: 5px; font-size: 17px; color: #fff;}
+		.bill_on em{display: block;}
+		.bill_on .amount li.on{border: 1px solid #ff8003;}
+		.bill_on .amount li.on a,.bill_on .amount li.on span{color: #ff8003;}
+		.bill_on .amount li a{height: 25px; line-height: 25px; margin-top: 12px;}
+		.bill_on .amount li span{display: block;}
+		.bill_on .bill_btn a{background: #ff8003;}
+		.bill_on .amount li.on.select{background: #ff8003;}
+		.bill_on .amount li.on.select a,.bill_on .amount li.on.select span{color:#fff;}
+	</style>
+</head> 
+<body> 
+<div class="bill_box bill_on"> <!-- bill_on是可充值状态 -->
+	<div class="bill_list">
+		<input class="bill_num" type="tel" placeholder="请输入手机号" maxlength="13" onkeydown="if(value.length==3||value.length==8){value+=' '}" onfocus="value=''" onblur="if(value==''){value='请输入手机号码'}" />
+		<em>(北京 移动)</em>
+	</div>
+	<div class="yzm">
+		<input class="bill_yzm" type="text" placeholder="请输入验证码" />
+		<span class="yzm_pic">
+			<em></em><!-- 这里放图 -->
+			<a>看不清，换一张</a>
+		</span>
+	</div>
+	<ul class="amount">
+		<li class="on select">
+			<a>10元</a>
+			<span>优惠价：9.98</span>
+		</li>
+		<li class="on">
+			<a>20元</a>
+			<span>优惠价：19.88</span>
+		</li>
+		<li>
+			<a>30元</a>
+			<span>优惠价：29.58</span>
+		</li>
+		<li>
+			<a>50元</a>
+			<span>优惠价：49.58</span>
+		</li>
+		<li>
+			<a>100元</a>
+			<span>优惠价：99.58</span>
+		</li>
+	</ul>
+	<div class="bill_btn"><a>立即充值</a></div>
+</div>
+</body> 
+</html> 

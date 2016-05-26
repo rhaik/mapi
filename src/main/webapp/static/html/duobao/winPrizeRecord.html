@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<title>夺宝记录</title> 
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/duobao.css">
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+</head> 
+<body>
+<div class="record_main">
+	<div class="record_con mt0">
+		<a class="detail_goods clearfix">
+			<div class="goods_pic"><span><img src="../../images/duobao/banner1.jpg" /></span></div>
+			<div class="goods_text">
+				<h1>Apple Watch 42毫米不锈钢表壳搭配运动型表带运动型表带运动型表带运动型表带运动型表带运动型表带运动型表带运动型表带运动型表带运动型表带运动型表带</h1>
+				<p><span>中奖时间：10-30 13:01</span></p>
+				<p class="clearfix"><span class="fl">购买人次：<i class="orange">5</i></span><em class="look_over fr">查看夺宝号></em></p>
+			</div>
+		</a>
+		<a class="detail_goods clearfix">
+			<div class="goods_pic"><span><img src="../../images/duobao/images2.jpg" /></span></div>
+			<div class="goods_text">
+				<h1>Apple Watch 42毫米不锈钢表壳搭配 运动型表带</h1>
+				<p><span>中奖时间：10-30 13:01</span></p>
+				<p class="clearfix"><span class="fl">购买人次：<i class="orange">5</i></span><em class="look_over fr">查看夺宝号></em></p>
+			</div>
+			<span class="tishi_pic">收货中</span>
+			<em></em>
+		</a>
+		<a class="detail_goods clearfix">
+			<div class="goods_pic"><span><img src="../../images/duobao/images2.jpg" /></span></div>
+			<div class="goods_text">
+				<h1>Apple Watch 42毫米不锈钢表壳搭配 运动型表带</h1>
+				<p><span>中奖时间：10-30 13:01</span></p>
+				<p class="clearfix"><span class="fl">购买人次：<i class="orange">5</i></span><em class="look_over fr">查看夺宝号></em></p>
+			</div>
+			<span class="tishi_pic">待收货</span>
+			<em></em>
+		</a>
+		<a class="detail_goods clearfix">
+			<div class="goods_pic"><span><img src="../../images/duobao/images2.jpg" /></span></div>
+			<div class="goods_text">
+				<h1>Apple Watch 42毫米不锈钢表壳搭配 运动型表带</h1>
+				<p><span>中奖时间：10-30 13:01</span></p>
+				<p class="clearfix"><span class="fl">购买人次：<i class="orange">5</i></span><em class="look_over fr">查看夺宝号></em></p>
+			</div>
+			<span class="tishi_pic">未晒单</span>
+			<em></em>
+		</a>
+		<a class="detail_goods clearfix">
+			<div class="goods_pic"><span><img src="../../images/duobao/images2.jpg" /></span></div>
+			<div class="goods_text">
+				<h1>Apple Watch 42毫米不锈钢表壳搭配 运动型表带</h1>
+				<p><span>中奖时间：10-30 13:01</span></p>
+				<p class="clearfix"><span class="fl">购买人次：<i class="orange">5</i></span><em class="look_over fr">查看夺宝号></em></p>
+			</div>
+			<div class="num_bg dn">
+					<div class="num_box">
+						<h1>夺宝号<span class="close"><img src="../../images/sign/no.png" /></span></h1>
+						<h2>本期购买<i class="orange">10</i>人次</h1>
+						<ul>
+							<li>10020006</li>
+							<li>10020007</li>
+							<li>10020008</li>
+							<li>10020005</li>
+							<li>10020006</li>
+							<li>10020007</li>
+							<li>10020008</li>
+							<li>10020005</li>
+							<li>10020006</li>
+							<li>10020007</li>
+							<li>10020008</li>
+							<li>10020005</li>
+							<li>10020006</li>
+							<li>10020007</li>
+							<li>10020008</li>
+							<li>10020005</li>
+						</ul>
+					</div>
+				</div>
+			<span class="tishi_pic">已完成</span>
+			<em class="finish"></em>
+		</a>
+	</div>
+</div>
+<div class="bottom">
+    <span><img src="../../images/loading.gif" /></span>
+    <p>没有更多了</p>
+</div>
+<script type="text/javascript">
+$(".nav_box ul li").click(function(){
+	$(this).addClass("on").siblings().removeClass();
+	var index=$(this).index();
+	$(".record_main").find(".record_con").eq(index).show().siblings().hide();
+})
+
+$(".look_over").click(function(){
+	$(".num_bg").show();
+})
+$(".close").click(function(){
+	$(".num_bg").hide();
+})
+</script>
+</body>
+</html>

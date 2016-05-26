@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head> 
+	<meta charset="utf-8"> 
+	<title>收纳学徒</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<!-- <link rel="stylesheet" type="text/css" href=" ../css/css.css"> -->
+	<link rel="stylesheet" type="text/css" href=" ../css/common.css">
+	<style type="text/css">
+		.tishi{margin:1.3em 0.93em; border:1px dashed #ff8001;}
+		.tishi p{font-size:0.875em; color: #ff8001; padding:0.83em;}
+		.reward{background:#fff; overflow:hidden;}
+		.total{margin:1.2em 2.1em;}
+		.total h1{font-size:2.25em; color:#ff8001; text-align:center;}
+		.total p{font-size:1em; color:#000; text-align:center; line-height:1.5em;}
+		.list_box{margin:1em 0;}
+		.list{width:50%; border-left:1px solid #ebeaea; margin-left: -1px;}
+		.list_top b{display:block; font-size:1.875em; color:#ff8001; text-align:center;}
+		.list_bot{margin-top:0.4em;}
+		.list_bot span{font-size:0.93em; line-height:1.9em; color:#444; display: block; text-align: center;}
+		.list_bot span a{width:1.7em; height:1.9em; background:url(../images/img/icon.png) no-repeat; background-size:20.6em 20.6em; display:inline-block; vertical-align:bottom;}
+		.list_bot span a.icon1{background-position:-2.5em 0;}
+		.list_bot span a.icon2{background-position: -8.9em 0.1em;}
+		
+		.entry_box{background:#fff; margin-top:1.1em;}
+		.entry{margin-left:1.1em; height:3em; line-height:3em; border-bottom:1px solid #dcdcdc;}
+		.entry a{display: block;}
+		.entry span{font-size:0.9em; color:#000;}
+		.entry b{width:0.6em; height:1em; display:block; background:url(../images/img/icon.png) 0 -2.9em / 20.6em 20.6em no-repeat; position:absolute; top:50%; right:1.2em; margin-top:-0.5em;}
+		.entry:last-child{border:none;}
+		.today{border-top:1px solid #dcdcdc; margin-top:0;}
+		.today .entry span{font-size:14px; color:#666;}
+		.today .entry span i{font-style:normal; color:#ff8001;}
+		.posi_btn{width:100%; background:#fff; position:fixed; bottom:0; left:0;}
+		.posi_btn a{height:2.5em; line-height:2.5em; margin:0.625em; text-align:center; background:#ff8001; display:block; border-radius:0.3em;}
+		
+	</style>
+</head> 
+<body> 
+	<div style="padding-bottom:65px">
+		<div class="tishi"><p>提示：徒弟完成限时、转发、金币任务甚至签到， 即可获得10%的分成收益。</p></div>
+		<div class="reward">
+			<div class="list_box posi_r clearfix">
+				<div class="list fl">
+					<div class="list_top"><b>10</b></div>
+					<div class="list_bot"><span><a class="icon1"></a>徒弟人数</span></div>
+				</div>
+				<div class="list fl">
+					<div class="list_top"><b>389.99</b></div>
+					<div class="list_bot"><span><a class="icon2"></a>累计徒弟奖励</span></div>
+				</div>
+			</div>
+			<!-- <div class="today">今日收徒<i class="orange">0</i>名，今日学徒奖励<i class="orange">0</i>元</div> -->
+		</div>
+		<div class="entry_box today">
+			<div class="entry posi_r"><a><span>今日收徒<i>0</i>人</span></a></div>
+			<div class="entry posi_r"><a><span>有效徒弟列表</span><b></b></a></div>
+		</div>
+		
+		<div class="entry_box">
+			<div class="entry posi_r"><span>为什么要收徒？</span><a></a></div>
+			<div class="entry posi_r"><span>如何收取更多徒弟？</span><a></a></div>
+		</div>
+	</div>
+	<div class="posi_btn">
+		<a>去收徒</a>
+	</div>
+	<script type="text/javascript" src="https://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>
+	<script>
+		/*$(".content").hide();
+		$(".btn a").click(function(){
+			$(".content").show();
+		})
+		$(".content").click(function(){
+			$(this).hide();
+		})*/
+		$(".entry").first().click(function(){
+			location.href='ApprenticeReason.html';
+		})
+		$(".entry").last().click(function(){
+			location.href='ApprenticeWay.html';
+		})
+	</script>
+</body> 
+</html> 

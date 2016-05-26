@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>摇色子</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body class="bg_b">
+<div class="">
+	<div class="shaizi_head clearfix">
+		<div class="shaizi_head_left fl">
+			<p>金币: 1000</p>
+			<p>参战次数: 50</p>
+			<p>胜利次数: 10</p>
+		</div>
+		<div class="shaizi_head_right fr">
+			<span>
+				<i>名字很长的时候...</i>
+				<em>ID:123456</em>
+			</span>
+			<b><img src="../images/img/personal_img.jpg" /></b>
+		</div>
+	</div>
+	<!-- 主界面 -->
+	<div class="shaizi_main posi_r">
+		<div class="shaizi_bg shaizi_top"></div>
+		<div class="shaizi_bg shaizi_con"></div>
+		<div class="shaizi_bg shaizi_bot"></div>
+		<div class="shaizi_pic">
+			<span><img src="../images/img/shaizi1.png" /></span>
+			<span><img src="../images/img/shaizi2.png" /></span>
+		</div>
+	</div>
+	<!-- 匹配中 -->
+	<div class="popup_bg dn"></div>
+	<div class="matching matching_successful dn">
+		<div id="countdown" class="countdown">10</div>
+		<p>用户匹配中请等待...</p>
+		<div class="matching_people">
+			<em><img src="../images/img/personal_img.jpg" /></em>
+			<i>PK</i>
+			<em><img src="../images/img/woman.png" /></em>
+		</div>
+	</div>
+	<!-- 没有匹配到 -->
+	<div class="matching matching_failure dn">
+		<p>抱歉<br/>未匹配到用户</p>
+		<a class="pipei_btn">重新匹配</a>
+	</div>
+	<!-- 匹配到赢了 -->
+	<div class="matching matching_success dn">
+		<em><img src="../images/img/matching_success.png" /></em>
+		<p>所向披靡<br/>奖励已打到您的账户</p>
+		<div class="results">奖励：+50金币</div>
+		<a class="pipei_btn">我不服再来</a>
+		<a class="pipei_way">查看对战记录</a>
+	</div>
+	<!-- 匹配到输了 -->
+	<div class="matching matching_success dn">
+		<em><img src="../images/img/.png" /></em>
+		<p>胜败乃兵家常事<br/>再接再厉再创辉煌</p>
+		<div class="results">扣款：-50金币</div>
+		<a class="pipei_btn">继续对战</a>
+		<a class="pipei_way">查看对战记录</a>
+	</div>
+	<div class="shaizi_head shaizi_head_bot clearfix">
+		<div class="shaizi_head_right fl">
+			<b><img src="../images/img/personal_img.jpg" /></b>
+			<span>
+				<i>xiaoping</i>
+				<em>ID:666666</em>
+			</span>
+		</div>
+		<div class="shaizi_head_left fr">
+			<p>金币: 1000</p>
+			<p>参战次数: 50</p>
+			<p>胜利次数: 10</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	/*var t = 11;  
+	//显示倒数秒数  
+	function showTime(){  
+	    t--;  
+	    document.getElementById('countdown').innerHTML= t;  
+	    if(t==0){
+	        $('.matching_failure').show();
+	        $('.matching_successful').hide();
+	    	return false;
+	    }else if(t<10){
+	    	//$('.popup_bg,.matching_successful').hide();
+	    } 
+	    //每秒执行一次,showTime()  
+	    setTimeout("showTime()",1000);  
+	}  
+	//执行showTime()  
+	showTime(); 
+	$(".pipei_btn").click(function(){
+		t = 11;
+		$(".matching_failure").hide();
+		$('.popup_bg,.matching_successful').show();
+		showTime(); 
+	})*/
+</script>
+</body>
+</html>
+
+
+
+
+
+

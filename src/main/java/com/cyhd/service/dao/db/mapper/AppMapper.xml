@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.AppMapper" >
+  
+  
+  <insert id="addAppByQucikTask" parameterType="com.cyhd.service.dao.po.App" keyProperty="id" useGeneratedKeys="true" >
+    insert into `money_app`(`name`,`process_name`,`icon`,`url`,`status`,`creater`,`createtime`,
+  	  `auditor`,`audit_time`,`description`,`agreement`,`bundle_id`,
+    	`download_size`,`appstore_id`,`is_promotion`,`pay_way`)
+    	 VALUES (#{name},#{process_name},#{icon},#{url},#{status},#{creater},#{createtime},
+    	#{auditor},#{audit_time},#{description},#{agreement},#{bundle_id},
+   		 #{download_size},#{appstore_id},#{is_promotion},#{pay_way}
+    	)
+  </insert>
+ 
+ </mapper>

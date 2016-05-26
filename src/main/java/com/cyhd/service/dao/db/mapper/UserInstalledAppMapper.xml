@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.UserInstalledAppMapper">
+
+	<insert id="insert" parameterType="com.cyhd.service.dao.po.UserInstalledApp">
+		<selectKey keyProperty="id" resultType="java.lang.Integer" order="AFTER">SELECT LAST_INSERT_ID() as id</selectKey>
+	    insert into money_user_installed_app (user_id, app_id, did, createtime, agreement)
+	    values (
+	      #{user_id}, 
+	      #{app_id}, 
+	      #{did}, 
+	      #{createtime}, 
+	      #{agreement} 
+	      ) on duplicate key update did=did
+	</insert>
+	
+	<select id="getListByUserId" resultType="int" parameterType="int">
+		select app_id from money_user_installed_app where user_id=#{userId}
+	</select>
+	
+	
+</mapper>

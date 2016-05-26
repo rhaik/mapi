@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="rhaik" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>转发任务</title> 
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+<style>
+	.ui-border-box{border-bottom:1px solid #dcdcdc; overflow:hidden; padding:0 1.1em; display:block;}
+	.ui-border-t{padding:0 5em; overflow:hidden; padding-top:0.9em; padding-bottom:0.9em;border:none;} 
+	.ui-list-thumb { width: 3.75em;height: 3.75em;margin: 0 0 0 -5em;display: block;float: left;}
+	.ui-list-thumb span{width:3.75em; height:3.75em; display:block; background-size:100%;}
+	.ui-list-info{float:left; padding-right:0;}
+	.ui-list-info h4 {width: 100%; height:1.5em; line-height:1.5em; overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp: 1; -webkit-box-orient:vertical; font-size:1em; color:#000; padding-top:0.3em; margin-bottom: 0.5em; font-weight:normal;}
+	.ui-list-info>p{padding-top:2px;padding-left:20px;color:#666666;}
+	.ui-li-taskimg {font-size: 0.8em; color: #666;display: block; margin-top: 0;line-height: 1.3em; background:url(images/task_04.png) left center no-repeat;background-size:14px 15px;height:auto;}
+	.ui-list-right{margin-right:-5em; float:right}
+	.cost {width: 3.75em;line-height: 1.9em;border-radius: 0.4em;margin-top: 0.5em;position: relative;}
+	.cost span{font-size:0.8em; text-align:right; color:#666; position:absolute; right:0; width:7em;}
+	.cost button{width:100%; font-size:0.75em; color:#666; line-height:1.625em; display:block; text-align:center; background:none; border:1px solid rgb(195, 194, 194); border-radius:0.3em; padding:0;}
+	.content .on button{color:#ff8003;border:1px solid #ff8003; border-radius:0.3em;}
+	.content .on span{font-size:0.7em;color:#ff8003;}
+	.content .on .ing{float:right; background:#ff8003; margin-top:0.4em;}
+	.ing_txt button{background:#ddd; border-radius:0.4em;}
+	.new .cost{margin-top:1.3em;}
+	.tip_bg{width:100%; height:100%; position:fixed; top:0; left:0; background:rgba(0,0,0,.5);}
+	.tip{width:92%; padding:0 4%; position:absolute; top:1.4em; left:0; z-index:2;}
+	.tip span{width:1.4em; height:1.4em; line-height:1.4em; text-align:center; display:block; background:#2ca0fd; border-radius:1.5em; float:right;}
+	.tip span a{font-size:1.6em; color:#fff;}
+	.tishi{background:#2ca0fd; width:100%; padding:0.9em 0; margin-top:4.6em; border-radius:0.5em; color:#fff;}
+	.tishi p{padding:0 1.25em 0.78em; line-height:1.4em;}
+	.tab{margin:0 1.25em; border:1px solid #fff;}
+	.tab table{width:100%; border-collapse:collapse;}
+	.tab tr{border-bottom:1px solid #fff;}
+	.tab tr:last-child{border-bottom:none;}
+	.tab tr td{text-align:center; border-right:1px solid #fff; padding:0.3em 0;}
+	.tab tr td:last-child{border-right:none;}
+	.line{width:2px; height:3.3em; background:#2ca0fd; float:right; margin:1.3em -0.7em 0 0;}
+</style>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<body> 
+<div class="content">
+	<ul class="ui-list ui-border-tb">
+		<a class="ui-border-box bg_f">
+		    <li class="ui-border-t" data-id="3327848a8717a6ca03c30040c243284043804240004103c37705e0e4dec9c9ba" data_transArticleId="691200efa75f0e170182c280c341ab43818381828002c141f787e2275f8acb39">
+		        <div class="ui-list-thumb">
+		            <span style="background:url(https://www.mapi.lieqicun.cn/static/images/img/app_icon.png)0 0 / 100% 100% no-repeat; border-radius:10px;"></span>
+		        </div>
+		        <div class="ui-list-info">
+		            <h4>假如爱有天意-sunyizheng</h4>
+		          	<p class="ui-li-taskimg">剩余81份</p>
+		        </div>
+		        <div class="ui-list-right new">
+		       	 	<div class="cost on">
+		        		<button>最高3元</button>
+		        	</div>
+	       	 	</div>
+		    </li>
+		  </a>
+		<a class="ui-border-box  bg_f">
+		    <li class="ui-border-t ui-li-finish" data-id="4fb83bfa1eefc18b01030100c1432f8381c341c1c2030201368621255c4888b9" data_transArticleId="9f75b201f7f1ebc6828203820080afc101408140c2834282340562e45ccac97b">
+		        <div class="ui-list-thumb">
+		            <span style="background:url(http://m.qpic.cn/psb?/73e34941-ec06-409e-8ccd-8788b9192d92/ydf2Mqum9fL9jYbaTKgK7xpoD.9g6OtgiWdi3stp2kw!/b/Ydv.An*ZmwAAYkGHBH81mgAA)0 0 / 100% 100% no-repeat; border-radius:10px;"></span>
+		        </div>
+		        <div class="ui-list-info">
+		            <h4>假如爱有天意-2-假如爱有天意-孙艺珍-假如爱有天意-孙艺珍</h4>
+		              <!-- <p class="ui-li-taskimg">需2人阅读</p> -->
+		          	  <p class="ui-li-taskimg">剩余187份</p>
+		        </div>
+		        <div class="ui-list-right">
+		       	 	<div class="cost on">
+		        		<button>进行中</button>
+		        		<span>已有80人阅读</span>
+		        	</div>
+	       	 	</div>
+		    </li>
+		  </a>
+		<a class="ui-border-box ">
+		    <li class="ui-border-t ui-li-finish" data-id="f68e8d4c1a909b93818202420041f34100000382830003427705a0e71d89493a" data_transArticleId="5449a98a03fbd22b408140c08000b103424240034281c141760722249d8b0a38">
+		        <div class="ui-list-thumb">
+		            <span style="background:url(http://pnewsapp.tc.qq.com/newsapp_bt/0/10590054/1000)0 0 / 100% 100% no-repeat; border-radius:10px;"></span>
+		        </div>
+		        <div class="ui-list-info">
+		            <h4>假如爱有天意-孙艺珍-假如爱有天意-孙艺珍-假如爱有天意-孙艺珍</h4>
+		             <!--  <p class="ui-li-taskimg">需2人阅读</p> -->
+		          	  <p class="ui-li-taskimg">剩余277份</p>
+		        </div>
+		        <div class="ui-list-right">
+		       	 	<div class="cost ing_txt">
+		        		<button>+ 2 元</button>
+		        		<span>任务已过期</span>
+		        	</div>
+	       	 	</div>
+		    </li>
+		  </a>
+		<a class="ui-border-box ">
+		    <li class="ui-border-t ui-li-finish" data-id="0f58cfd2e5f458a783c2018082007f438143810181c10201758761e41cc88b38" data_transArticleId="b560706548cc82c0014040c08102f54080018102c2c20380f6046325dc8b8bb8">
+		        <div class="ui-list-thumb">
+		            <span style="background:url(http://cdn.erbicun.cn/20150916141958qiniu738_.jpg)0 0 / 100% 100% no-repeat; border-radius:10px;"></span>
+		        </div>
+		        <div class="ui-list-info">
+		            <h4>捉妖记-renwu</h4>
+		              <!-- <p class="ui-li-taskimg">需20人阅读</p> -->
+		          	  <p class="ui-li-taskimg">剩余98份</p>
+		        </div>
+		        <div class="ui-list-right">
+		       	 	<div class="cost ing_txt">
+		        		<button>+ 2.05 元</button>
+		        		<span>任务已被抢光</span>
+		        	</div>
+	       	 	</div>
+		    </li>
+		  </a>
+		<a class="ui-border-box ">
+		    <li class="ui-border-t ui-li-finish" data-id="ba94d34097421a5143038101c00097454143838043c20143f744e1675c0a093b" data_transArticleId="1b148ab1fe098256434043424183c54781014382c3818140f58560255f090aba">
+		        <div class="ui-list-thumb">
+		            <span style="background:url(http://cdn.erbicun.cn/20150921201125qiniu1742_.jpg)0 0 / 100% 100% no-repeat; border-radius:10px;"></span>
+		        </div>
+		        <div class="ui-list-info">
+		            <h4>恋爱星空-test</h4>
+		              <!-- <p class="ui-li-taskimg">需10人阅读</p> -->
+		          	  <p class="ui-li-taskimg">剩余8份</p>
+		        </div>
+		        <div class="ui-list-right">
+		       	 	<div class="cost ing_txt">
+		        		<button>+ 0 元</button>
+		        		<span>已发放奖励</span>
+		        	</div>
+	       	 	</div>
+		    </li>
+		  </a>
+		<a class="ui-border-box ">
+		    <li class="ui-border-t ui-li-finish" data-id="9fcbac72eeab7acc010180818201cbca80c1c3030002808335c4a025df4bcb38" data_transArticleId="8b24a7bbd6db8a77c082c341c0c1174682c3024002c04381b746e324dc0a4979">
+		        <div class="ui-list-thumb">
+		            <span style="background:url(http://m.qpic.cn/psb?/73e34941-ec06-409e-8ccd-8788b9192d92/ydf2Mqum9fL9jYbaTKgK7xpoD.9g6OtgiWdi3stp2kw!/b/Ydv.An*ZmwAAYkGHBH81mgAA)0 0 / 100% 100% no-repeat; border-radius:10px;"></span>
+		        </div>
+		        <div class="ui-list-info">
+		            <h4>在郑州，有车和没车的区别，太直接了……</h4>
+		              <!-- <p class="ui-li-taskimg">需1人阅读</p> -->
+		          	  <p class="ui-li-taskimg">剩余0份</p>
+		        </div>
+		        <div class="ui-list-right">
+		       	 	<div class="cost ing_txt">
+		        		<button>+ 0 元</button>
+		        		<span>任务已过期</span>
+		        	</div>
+	       	 	</div>
+		    </li>
+		  </a>
+	</ul>
+</div>
+<div class="tip_bg">
+	<div class="tip clearfix">
+		<span><a>×</a></span>
+		<div class="line"></div>
+		<div class="tishi">
+			<p>点击文章标题进入，并将内容分享至朋友圈，好友阅读即可获得收入，阅读人数越多则收入越高满10元就可以在个人中心提现啦！奖励如下：</p>
+			<div class="tab">
+				<table>
+					<tr>
+						<td width="40%">达到阅读人数</td>
+						<td width="15%">1</td>
+						<td width="15%">5</td>
+						<td width="15%">20</td>
+						<td width="15%">80</td>
+					</tr>
+					<tr>
+						<td width="40%">共获得奖励</td>
+						<td width="15%">0.1</td>
+						<td width="15%">0.5</td>
+						<td width="15%">0.6</td>
+						<td width="15%">3</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/static/js/jquery.min.js"></script> 
+<script>
+$('.tip span').click(function(){
+	$('.tip_bg').slideUp();
+})
+</script>
+</body>
+</html>

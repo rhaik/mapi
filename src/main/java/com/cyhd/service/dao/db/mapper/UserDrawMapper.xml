@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.UserDrawMapper" >
+  
+  
+  <insert id="addOrUpdateUserDraw" parameterType="Integer" >
+  <selectKey keyProperty="id" resultType="java.lang.Integer" order="AFTER">SELECT LAST_INSERT_ID() as id</selectKey>
+    insert into `money_user_draw` ( `user_id`, `activity_id`, `total_times`, `balance_times`, `createtime`) 
+    VALUES (#{0}, #{1}, 1, 1, now()) on duplicate key 
+    update total_times=total_times+1,balance_times=balance_times+1
+  </insert>
+
+  <insert id="addOrUpdateUserDrawTimes" parameterType="Integer" >
+    <selectKey keyProperty="id" resultType="java.lang.Integer" order="AFTER">SELECT LAST_INSERT_ID() as id</selectKey>
+    insert into `money_user_draw` ( `user_id`, `activity_id`, `total_times`, `balance_times`, `createtime`)
+    VALUES (#{0}, #{1}, #{2}, #{2}, now()) on duplicate key
+    update total_times=total_times+#{2},balance_times=balance_times+#{2}
+  </insert>
+</mapper>

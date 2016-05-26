@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>签到记录</title> 
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<style type="text/css">
+		/* 公共部分开始 */
+		body{background:#fff;}
+		.header{width:100%; height:2.75em; line-height:2.75em; text-align:center; background:#19191f; position:relative; z-index:2;}
+		.header span{font-size:1.3em; color:#fff;}
+		.header .back{width:0.8em; display:block; position:absolute; top:0.6em; left:10px;}
+		/* 公共部分结束 */
+		.month{border-bottom:1px solid #dcdcdc; height:2.5em; overflow:hidden; position:relative;}
+		.month a{font-size:0.9em; line-height:2.9em; color:#999; position:absolute; top:0;}
+		.month a.month_first{left:15px;}
+		.month a.month_next{right:15px;}
+		.month a em{width:0.56em; height:0.9em; display:inline-block; }
+		.month a.month_first em{background:url(../../images/sign/left_h.png) 0 0 / 100% 100% no-repeat; margin-right:0.2em;}
+		.month a.month_next em{background:url(../../images/sign/right_h.png) 0 0 / 100% 100% no-repeat; margin-left:0.2em;}
+		.month span{font-size:1em; color:#000; line-height:2.5em; text-align:center; display:block;}
+		.month a.on{color:#111;}
+		.month a.month_first.on em{background:url(../../images/sign/left_on.png) 0 0 / 100% 100% no-repeat;}
+		.month a.month_next.on em{background:url(../../images/sign/right_on.png) 0 0 / 100% 100% no-repeat;}
+		.tab{margin:15px 15px 0;}
+		.tab table{width:100%;}
+		.tab table tr td{font-size:1em; line-height:1.5em;}
+		.tab table tr td:last-child{color:#e60012;}
+		.tab table tr.first td{font-size:1.1em; color:#000;}
+		.tab table tr td span{width:1em; height:0.75em; display:block; background:url(../../images/sign/yes.png) no-repeat; background-size:100%; margin:0 auto;}
+		.tab table tr td span.no{background:url(../../images/sign/no.png) no-repeat; background-size:100%;}
+	</style>
+</head> 
+<body>
+<!-- header -->
+<header class="header">
+	<a class="back"><img width="100%" src="../../images/duobao/back_btn.png" /></a>
+	<span>每日签到</span>
+</header>
+<div class="record">
+	<div class="month">
+		<a class="month_first on"><em></em>上一月</a>
+		<span>2015年9月</span>
+		<a class="month_next">下一月<em></em></a>	
+	</div>
+	<div class="tab">
+		<table>
+			<tr class="first">
+				<td width="33.3%">签到日期</td>
+				<td class="txt_c" width="33.3%">签到</td>
+				<td class="txt_r" width="33.3%">签到奖励金币</td>
+			</tr>
+			<tr>
+				<td>2015-09-17</td>
+				<td><span></span></td>
+				<td class="txt_r">60</td>
+			</tr>
+			<tr>
+				<td>2015-09-16</td>
+				<td><span></span></td>
+				<td class="txt_r">80</td>
+			</tr>
+			<tr>
+				<td>2015-09-15</td>
+				<td><span></span></td>
+				<td class="txt_r">100</td>
+			</tr>
+			<tr>
+				<td>2015-09-14</td>
+				<td><span class="no"></span></td>
+				<td class="txt_r">0</td>
+			</tr>
+			<tr>
+				<td>2015-09-13</td>
+				<td><span></span></td>
+				<td class="txt_r">60</td>
+			</tr>
+			<tr>
+				<td>2015-09-12</td>
+				<td><span></span></td>
+				<td class="txt_r">80</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+</body> 
+</html> 

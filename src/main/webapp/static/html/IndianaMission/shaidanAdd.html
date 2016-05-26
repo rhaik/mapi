@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>晒单</title> 
+	<script type="text/javascript" src="jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="diyUpload/css/webuploader.css">
+	<link rel="stylesheet" type="text/css" href="diyUpload/css/diyUpload.css">
+	<script type="text/javascript" src="diyUpload/js/webuploader.html5only.min.js"></script>
+	<script type="text/javascript" src="diyUpload/js/diyUpload.js"></script>
+	<style type="text/css">
+		body{font-family:"微软雅黑"; background:#fff;}
+		.add_text{margin:15px 20px; min-height: 60px; outline:none;}
+		.add_img{margin:10px 20px;}
+		.parentFileBox{width:100%;}
+		.pics{width:5.7em; height:5.7em; margin-right:10px; float:left; position:relative;}
+		/* .pics input{width:100%; height:5.7em; position:absolute; top:0; left:0; z-index:9;}
+		.pics label{width:5.7em; height:5.7em; position:absolute; top:0; left:0;} 
+		.choose_pic{overflow:hidden;}*/
+		.choose_pic span{color:#b3b3b3; line-height:5.7em;}
+	</style>
+</head> 
+<body>
+<!-- 添加晒单 -->
+<div class="add_text" contenteditable="true">您的在一刻的想法...</div>
+<div class="add_img">
+	<div id="box" class="choose_pic">
+		<div id="test" class="pics">
+			<!-- <input  type="file" accept="image/*;capture=camera" />
+			<label><img width="100%" src="../../images/duobao/add_img.png" /></label> -->
+		</div>
+		<span>添加照片</span>
+	</ul>
+	<!-- <div class="choose_pic" style="display:none">
+		<div><input type="button"id="btnCamera"value="picture from camera"/></div>
+	</div> -->
+</div>
+
+</body> 
+<script type="text/javascript">
+	$('#test').diyUpload({
+		url:'server/fileupload.php',
+		success:function( data ) {
+			console.info( data );
+		},
+		error:function( err ) {
+			console.info( err );	
+		}
+	});
+
+	$('#as').diyUpload({
+		url:'server/fileupload.php',
+		success:function( data ) {
+			console.info( data );
+		},
+		error:function( err ) {
+			console.info( err );	
+		},
+		buttonText : '选择文件',
+		chunked:true,
+		// 分片大小
+		chunkSize:512 * 1024,
+		//最大上传的文件数量, 总文件大小,单个文件大小(单位字节);
+		fileNumLimit:50,
+		fileSizeLimit:500000 * 1024,
+		fileSingleSizeLimit:50000 * 1024,
+		accept: {}
+	});
+</script>
+</html> 

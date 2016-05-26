@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>收纳好友</title> 
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.0.8/css/swiper.min.css">
+	<style type="text/css">
+		body{background:#fff;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;color:#000;margin:0;padding:0;}
+		.swiper-container{width:100%;padding-top:50px;padding-bottom:50px;}
+		.swiper-slide{background-position:center; width:14.2em; height:19em;}
+		.banner_text{width:100%; text-align:center; font-size:0.75em; color:#666; margin-top:1em;}
+		.point{width:6.5em; margin:0 auto; margin-top:2em; overflow:hidden;}
+		.point li{width:0.6em; height:0.6em; border:2px solid #666; border-radius:0.6em; float:left; margin:0 0.6em;}
+		.point li.on{background:#666;}
+		.btn{margin:2.2em 1.3em; height:3.4em; line-height:3.4em; background:#ff8003; border-radius:0.4em;}
+		.btn a{text-align:center; display:block; font-size:1.3em; cursor:pointer;}
+		.foot{width:100%; height:3.25em; position:fixed; bottom:0; background:#fff; border-top:1px solid #999;}
+		.foot_sort{width:50%; border-left:1px solid #dcdcdc; margin-left:-1px; float:left; height:2.25em; line-height:2.25em; margin-top:0.5em; text-align:center;}
+		.foot_sort a{font-size:1.1em; color:#222;}
+		.foot_sort a.on{color:#ff8003;}
+		.load{width:100%; height:19em; line-height:19em; background:#fff; position: absolute; top:50px; text-align:center; z-index: 999;}
+		.load > div {
+		  width: 20px;
+		  height: 20px;
+		  background-color: #ff8003;
+		  border-radius: 100%;
+		  display: inline-block;
+		  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+		  animation: bouncedelay 1.4s infinite ease-in-out;
+		  /* Prevent first frame from flickering when animation starts */
+		  -webkit-animation-fill-mode: both;
+		  animation-fill-mode: both;
+		}
+
+		.load .bounce1 {
+		  -webkit-animation-delay: -0.32s;
+		  animation-delay: -0.32s;
+		}
+
+		.load .bounce2 {
+		  -webkit-animation-delay: -0.16s;
+		  animation-delay: -0.16s;
+		}
+
+		@-webkit-keyframes bouncedelay {
+		  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+		  40% { -webkit-transform: scale(1.0) }
+		}
+
+		@keyframes bouncedelay {
+		  0%, 80%, 100% { 
+		    transform: scale(0.0);
+		    -webkit-transform: scale(0.0);
+		  } 40% { 
+		    transform: scale(1.0);
+		    -webkit-transform: scale(1.0);
+		  }
+		}
+	</style>
+</head> 
+<body> 
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<!-- <div class="banner_pic left"style="background:linear-gradient(to left,rgba(0,0,0,.8),rgba(0,0,0,0)), url(../images/img/pic1.jpg) no-repeat; background-size: cover;"></div>
+			<div class="banner_pic con" style="background:url(../images/img/pic2.jpg) no-repeat; background-size:cover;"></div>
+			<div class="banner_pic right" style="background:linear-gradient(to left,rgba(0,0,0,.0),rgba(0,0,0,8)), url(../images/img/pic3.jpg) no-repeat; background-size: cover;"></div> -->
+			<div class="swiper-slide" style="background:url(../images/img/pic1.jpg) no-repeat; background-size:cover;"></div>
+			<div class="swiper-slide" style="background:url(../images/img/pic2.jpg) no-repeat; background-size:cover;"></div>
+			<div class="swiper-slide" style="background:url(../images/img/pic3.jpg) no-repeat; background-size:cover;"></div>
+			
+			<!-- <div class="loding"></div> -->
+		</div>
+		<div class="load">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p class="banner_text">点击下面按钮保存后，将图片发送给好友完成收徒</p>
+		<ol class="swiper-pagination">
+			<li class="swiper-pagination-bullet"></li>
+			<li class="swiper-pagination-bullet swiper-pagination-bullet-active"></li>
+			<li class="swiper-pagination-bullet"></li>
+		</ol>
+		<div class="btn">
+			<a>保存到相册</a>
+		</div>
+		
+	</div>
+	<footer class="foot">
+		<div class="foot_sort"><a href="ReceiveFriend.html">普通版</a></div>
+		<div class="foot_sort"><a href="ReceiveFriend_pic.html" class="on">图片版</a></div>
+	</footer>
+	<script src="https://cdn.bootcss.com/Swiper/3.0.8/js/swiper.min.js"></script>
+	<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop:true,
+        loopedSlides:3,
+        coverflow: {
+            rotate: 40,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+        }
+    });
+    </script>
+</body> 
+</html> 

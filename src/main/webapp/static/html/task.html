@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="rhaik" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1,minimal-ui" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>新手任务</title> 
+        <link rel="stylesheet" type="text/css" href="/static/frozenui/1.2.1/css/frozen.css">
+        <script src="https://lib.sinaapp.com/js/zepto/1.0/zepto.min.js"></script>
+    </head>
+ <body><body>
+<style>
+	.ui-border-t {border-top: 1px solid #dcdcdc;background-image:none;}
+	.ui-btn:before{border:none;}
+	.ui-btn{color:#ff8103;border: 1px solid #ff8103;border-radius:6px;padding:0px 8px;font-size:13px;height:auto;line-height:26px}
+	.finish{color: #666666;border: 1px solid #666666;border-radius:6px;}
+	.ui-list-thumb {margin: 10px 10px 6px 0px;width:50px;height:50px;margin-bottom:30px;margin-right:20px;}
+	.ui-list-thumb div{font-size:13px;padding-top:52px;height:20px;width:60px;}
+	.ui-list-info p{font-size:14px;color: #e80010;margin-top:10px;}
+</style>
+<ul class="ui-list ui-list-active ui-border-tb">
+    <li class="ui-border-b"  data-id="1" data-encodedId="b6c5b7a911fbc23ac14241004202474041c300c1c081c0c2b647d9b1da1b49f2">
+        <div class="ui-list-thumb">
+            <span style="background-image:url(http://mapi.lieqicun.cn/static/images/mytask_01.png);border-radius:10px;"></span>
+            <div>邀请好友</div>
+        </div>
+        <div class="ui-list-info">
+            <h4>收五个徒弟</h4>
+            <p>奖励：￥2</p>
+        </div>
+        	<button class="ui-btn">去执行</button>
+        <span>
+	        已邀请0人
+	   </span>
+    </li>
+    <li class="ui-border-b"  data-id="3" data-encodedId="77af69a8ca0672400042c0c182c14cc342000283c2014241f405db719b5b89b1">
+        <div class="ui-list-thumb">
+            <span style="background-image:url(http://mapi.lieqicun.cn/static/images/mytask_03.png);border-radius:10px;"></span>
+            <div>牛刀小试</div>
+        </div>
+        <div class="ui-list-info">
+            <h4>完成一个限时任务</h4>
+            <p>奖励：￥2</p>
+        </div>
+        	<button class="ui-btn finish"">已完成</button>
+        <span>
+	        
+	   </span>
+    </li>
+ <li class="ui-border-b"  data-id="4" data-encodedId="好好学习天天向上">
+        <div class="ui-list-thumb">
+            <span style="background-image:url(http://cdn.erbicun.cn/20151026134507qiniu9663_.png);border-radius:10px;"></span>
+            <div>收徒赚钱</div>
+        </div>
+        <div class="ui-list-info">
+            <h4>收徒赚钱</h4>
+            <p>奖励：￥200</p>
+        </div>
+        <button class="ui-btn">去执行</button>
+    </li>
+</ul>
+<script>
+$(function(){
+	$('ul>li').click(function(){
+		var id = $(this).attr('data-id');
+		var url = '/web/task/' + $(this).attr('data-encodedId');
+		if(id == '1' || id == '2')
+			url = '/web/discovery/share.html';
+		else if (id == '3')
+			url = '/web/discovery/tasks.html';
+		else if(id == '4'){
+			url = '/static/html/apprentice.html';
+		}
+		if(typeof MiJSBridge=="object") {
+			MiJSBridge.call("open", {url: url});
+		} else {
+			window.location.href= url;
+		}
+	});
+	$('.finish').parent().unbind("click");
+});
+</script>
+</body>
+<!-- more common content goes here! -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?6de7a5bf2a73f328d02455cc5727aba6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

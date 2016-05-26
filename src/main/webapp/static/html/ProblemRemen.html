@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>热门问题</title> 
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<script type="text/javascript" src="https://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>
+	<style type="text/css">
+		body{background:#fff;}
+		.swiper-container,.swiper-wrapper{width:100%;}
+	    .swiper-slide{width:100%; margin:1.25em auto 0; text-align:center; font-size:18px; background:#fff; display:-webkit-box;
+	        display:-ms-flexbox; display:-webkit-flex; display:flex; -webkit-box-pack:center; -ms-flex-pack:center; -webkit-justify-content:center; justify-content:center; -webkit-box-align:center; -ms-flex-align:center;
+	        -webkit-align-items:center; align-items:center; float:left;}
+	    .titlt{margin:1.9em 0 1.6em; height:1.3em; position:relative;}
+	    .left_line{position:absolute; top:0.5em; left:0; width:7.5em; float:left;}
+	    .right_line{position:absolute; top:0.5em; right:0; width:7.5em; float:left;}
+	    .content{width:6.25em; position:absolute; left:50%; margin-left:-3.125em; text-align:center; font-size:1.1em; color:#000;}
+	    .main_list{padding-left:0.9em;}
+	    .question{font-size:1em; color:#000; border-bottom:1px solid #dcdcdc; padding:0.9em 1.9em 0.9em 0; position:relative;}
+	    .question em{width:0.78em; height:0.5em; display:block; background:url(../images/img/down.png) no-repeat; background-size:100%; position:absolute; top:50%; right:0.9em; margin-top:-0.15em;}
+	    .question em.on{background:url(../images/img/up.png) no-repeat; background-size:100%;}
+	    .answer{border-bottom:1px solid #dcdcdc; font-size:1em; color:#000; padding:0.9em 0.9em 0.9em 0; line-height:1.4em;} 
+	    .answer p i{font-style:normal; color:#ff8003;}
+	</style>
+</head> 
+<body> 
+
+<!-- 任务更新 -->
+<div>
+	<div class="titlt">
+		<div class="left_line"><img src="../images/img/line.png" /></div>
+		<div class="content">热门问题</div>
+		<div class="right_line"><img src="../images/img/line.png" /></div>
+	</div>
+	<div class="main">
+		<div class="main_list">
+			<div class="question">Q1:如何下载？<em></em></div>
+			<div class="answer dn">
+				<p><i>A</i>：先关注我们的微信公众账号la6680或者vrenwu2014。</p>
+				<p>进入后点击底部菜单栏【开始赚钱】- 【开始赚钱】选项-【安装并打开秒赚大钱】，然后按照步骤安装，安装成功后，打开登录后就可以做任务了。支持安卓和苹果用户，暂不支持越狱系统。</p>
+			</div>
+		</div>
+		<div class="main_list">
+			<div class="question">Q2:下载不成功？<em></em></div>
+			<div class="answer dn">
+				<p><i>A</i>：①下载时，界面显示：无法验证或者未受信任的企业级开发者</p>
+				<p>请您点击【设置】-【通用】-【描述文件】-【Beijng Creative Interactive...】,点击信任即可。</p>
+				<p>②下载时，界面显示：无法识别等</p>
+				<p>建议您打开手机【设置】-【隐私】-【广告】-关闭【限制广告跟踪】即可。</p>
+			</div>
+		</div>
+		<div class="main_list">
+			<div class="question">Q3:为什么发送二维码之后，没有获得收益？<em></em></div>
+			<div class="answer dn">
+				<p><i>A</i>：您将您的二维码发送给您的朋友，会让您的朋友变成您的徒弟，您收的前五个徒弟一共会给您带来2.5元的收益，之后再收的徒弟不再有现金奖励，但是当您的徒弟在完成任何带有奖励的任务后，您都能从他做的任务奖励中额外获得10%的任务收益，此奖励由我们官方提供。</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	$('.question').on('click',function(){
+		$(this).next('.answer').slideToggle();
+		$(this).find('em').toggleClass('on');
+
+	})
+
+
+</script>
+</body> 
+</html> 

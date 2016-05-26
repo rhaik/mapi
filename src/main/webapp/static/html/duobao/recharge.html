@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<title>个人中心-充值</title> 
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/duobao.css">
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+</head> 
+<body> 
+<div class="amount">
+	<ul class="clearfix">
+		<li class="on">
+			<a>
+				<span>2个</span>
+				<em>消耗2元</em>
+			</a>
+		</li>
+		<li>
+			<a>
+				<div class="box">
+					<span>5个</span>
+					<em>消耗5元</em>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a>
+				<div class="box">
+					<span>10个</span>
+					<em>消耗9元</em>
+					<i class="promotion">省1元</i>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a>
+				<div class="box">
+					<span>15个</span>
+					<em>消耗13.5元</em>
+					<i class="promotion">省1.5元</i>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a>
+				<div class="box">
+					<span>20个</span>
+					<em>消耗18元</em>
+					<i class="promotion">省2元</i>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a>
+				<div class="box">
+					<span>30个</span>
+					<em>消耗27元</em>
+					<i class="promotion">省3元</i>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+<div class="money">账户余额：68.18</div>
+<div class="cz_tishi">一个工作日内到账，周末及节假日不处理提现业务支付宝扣除手续费1元，实际到账共<i class="red">9.00</i>元</div>
+<div class="button">
+	<a>立即兑换</a>
+</div>
+<script type="text/javascript">
+	$(".amount ul li").click(function(){
+		$(this).addClass("on").siblings().removeClass("on");
+	})
+</script>
+</body> 
+</html> 

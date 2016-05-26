@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="cyhd" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>分享-猎奇赚钱</title> 
+        <link rel="stylesheet" type="text/css" href="../frozenui/1.2.1/css/frozen.css">
+        <style>
+			.ui-list li{margin:0px 10px;height:66px;font-family:font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;}
+			.ui-list li h4{margin-left:15px;line-height:30px;color:#222222;font-size:22px;}
+			.ui-avatar-customer{overflow: hidden;-webkit-border-radius: 200px;display: block;-webkit-background-size: 100% 100%;width:72px;height:72px;background-image: url(<?php echo $user['avatar']?>);}
+			.ui-list .ui-list-action{font-size:26px;color:#ff8003;top:35%;}
+			.ui-list .ui-list-action span{font-size:16px;color:#222222;margin-left:10px;}
+			.ui-list li .ui-btn-danger{height:46px;top:22%;right:0px;padding:0 auto;background-color: #ff8103; color: #ffffff;font-size:26px;background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5,#ff8103),to(#ff8103));border-color: #ff8103;}
+			.header{background:url(../images/share_03.png) center no-repeat;background-size:450px;text-decoration:none;}
+			.bdsharebuttonbox{margin-left:40px;}
+			.bdsharebuttonbox a{margin-right:20px;width:40px;float:left;}
+		</style>
+        <script src="https://lib.sinaapp.com/js/zepto/1.0/zepto.min.js"></script>
+        <script src="../frozenjs/1.0.1/frozen.js"></script> 
+    </head>
+<body>
+
+<ul class="ui-list ui-border-t">
+	<li class="header" style="height:158px;">
+		<div style="margin:auto;text-align:center;margin-top:9px;">
+           <div class="ui-avatar-customer"></div>
+           <div style="margin-top:25px;line-height:25px;color: #ffffff;font-size:20px;">用户名</div>
+        </div>
+	</li>
+    <li class="ui-border-t">
+        <div class="ui-list-info">
+            <h4>使用天数</h4>
+        </div>
+        <div class="ui-list-action ui-txt-warning">0<span>天</span></div>
+    </li>
+    <li class="ui-border-t">
+        <div class="ui-list-info">
+            <h4>试用收入</h4>
+        </div>
+        <div class="ui-list-action ui-txt-warning">0<span>元</span></div>
+    </li>
+    <li class="ui-border-t">
+        <div class="ui-list-info">
+            <h4>邀请人数</h4>
+        </div>
+        <div class="ui-list-action ui-txt-warning">0<span>人</span></div>
+    </li>
+    <li class="ui-border-t">
+        <div class="ui-list-info">
+            <h4>邀请奖励</h4>
+        </div>
+        <div class="ui-list-action ui-txt-warning">0<span>元</span></div>
+    </li>
+    <li class="ui-border-t">
+        <div class="ui-list-action ui-txt-warning" style="font-size:16px;color:#999999;margin-left:33px;margin-bottom:29px;">收入单每半个小时更新一次</div>
+    </li>
+    <li class="ui-border-t" style="margin-right:15px;">
+     	<button class="ui-btn-lg ui-btn-danger" data-url="">晒单</button>
+    </li>
+</ul>
+
+<div class="ui-dialog">
+    <div class="ui-dialog-cnt" style="width:300px;">
+        <div class="ui-dialog-bd">
+            <div>
+	            <h4>分享给好友</h4>
+	            <div class="bdsharebuttonbox">
+					<a href="#" class="bds_weixin" data-cmd="weixin" style="background:url(../images/wxhy.png) center no-repeat;background-size:50px 50px;margin-top:20px;width:50px;height:50px;" title="分享到微信"></a>
+					<a href="#" class="bds_qzone" data-cmd="qzone" style="background:url(../images/qqkj.png) center no-repeat;background-size:50px 50px;margin-top:20px;width:50px;height:50px;" title="分享到QQ空间"></a>
+					<a href="#" class="bds_sqq" data-cmd="sqq" style="background:url(../images/qqhy.png) center no-repeat;background-size:50px 50px;margin-top:20px;width:50px;height:50px;"  title="分享到QQ好友"></a>
+					<a href="#" class="bds_tsina" data-cmd="tsina" style="background:url(../images/xlwb.png) center no-repeat;background-size:50px 50px;margin-top:20px;width:50px;height:50px;"  title="分享到新浪微博"></a>
+					<a href="#" class="bds_tqq" data-cmd="tqq" style="background:url(../images/txwb.png) center no-repeat;background-size:50px 50px;margin-top:20px;width:50px;height:50px;"  title="分享到腾讯微博"></a>
+					<a href="#" class="bds_tqf" data-cmd="tqf" style="background:url(../images/pyq.png) center no-repeat;background-size:50px 50px;margin-top:20px;width:50px;height:50px;"  title="分享到腾讯朋友"></a>
+				</div>
+            </div>
+        </div>
+        <div class="ui-dialog-ft ui-btn-group">
+            <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">取消</button> 
+        </div>
+    </div>        
+</div>
+
+
+
+<script>
+window._bd_share_config={
+    "common":{"bdSnsKey":{},"bdText":"赚大钱","bdMini":"2","bdMiniList":false,"bdDesc":"赚大钱描述","bdUrl":'',"bdPic":'',"bdStyle":"0","bdSize":"32"},
+    "share":{},
+    "image":{"viewList":["weixin","qzone","sqq","tsina","tqq","tqf"],"viewText":"分享到：","viewSize":"16"},
+    "selectShare":{"bdContainerClass":null,"bdSelectMiniList":["weixin","qzone","sqq","tsina","tqq","tqf"]}
+};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];
+
+$(function(){
+	$(".ui-btn-lg").tap(function(){
+	    $(".ui-dialog").dialog("show");
+    });
+});
+</script>
+</body>
+</html>

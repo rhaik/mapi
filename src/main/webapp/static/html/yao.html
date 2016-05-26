@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>摇一摇</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.min.css">
+	<script src="https://lib.sinaapp.com/js/zepto/1.0/zepto.min.js"></script>
+	<script type="text/javascript" src="../js/red.js"></script>
+</head>
+<body class="red_bg">
+<!-- 红包音乐 -->
+<audio id="shakemusic" src="../music/red-01.mp3" style="display: none;"></audio>
+<audio id="openmusic" src="../music/red-02.mp3" style="display: none;"></audio>
+<!-- 分享弹框 -->
+<div class="shake_share dn">
+	<ul>
+		<em class="jiantou"></em>
+		<li><a><em><img src="../images/img/rule.png" /></em>活动规则</a></li>
+		<li><a><em><img src="../images/img/share.png" /></em>分享朋友圈</a></li>
+	</ul>
+</div>
+<!-- 红包 -->
+<div class="shake_box">
+	<div class="shake_ordinary">
+		<!-- 更新时间提示 -->
+		<div class="tishi"><i></i>有新任务啦！任务更新时间为每天15:00左右</div>
+		<!-- 大标题 -->
+		<div class="shake_title"><img src="../images/img/title.png" /></div>
+		<!-- 开抢时间 -->
+		<div class="start dn">明日 10：00 准时开抢</div>
+		<!-- 红包个数 -->
+		<div class="summation">
+			<em>共有</em><i>1</i><i>0</i><i>0</i><i>0</i><i>0</i><em>个红包</em>
+		</div>
+		<!-- 摇一摇 -->
+		<div class="shake_bg">
+			<span class="shake_pic animated"></span>
+		</div>
+		<div class="btn"><a><em><img src="../images/img/fenxiang.png" /></em>点此分享</a></div>
+	</div>
+	<!-- 抢到红包 -->
+	<div class="get_shake_bg">
+		<!-- 抢红包页面 -->
+		<div class="get_shake">
+			<i>×</i>
+			<em><img src="../images/img/logo.png" /></em>
+			<h1>秒赚大钱</h1>
+			<!-- 抢到红包 -->
+			<div class="dn">
+				<p>给你发了一个红包</p>
+				<h2>新年快乐，恭喜发财！</h2>
+				<span class="open_shake">拆红包</span>
+			</div>
+			<!-- End 抢到红包 -->
+			<!-- 没有抢到红包 -->
+			<div class="shoutu_hongbao">
+				<h3>啊哦，红包已经抢完了</h3>
+				<h4>收徒获得更多专属红包</h4>
+				<div class="btn"><a>去收徒</a></div>
+			</div>
+			<!--End 没有抢到红包 -->
+		</div>
+		<!-- 活动介绍 -->
+		<div class="get_shake search_shake shake_sma dn">
+			<i>×</i>
+			<h1>活动介绍</h1>
+			<div class="search_shake_text">
+				<p>活动日期：</p>
+				<p>2月1日-2月14日</p>
+			</div>
+			<div class="search_shake_text">
+				<p>系统红包：</p>
+				<p>在活动期间，每天10:00,15:00,18:00整点打开红包页摇一摇，系统会发放10000个红包，百分百中奖</p>
+			</div>
+			<div class="search_shake_text">
+				<p>专属红包：</p>
+				<p>在活动期间，每新收一个徒弟并且完成一个限时任务或者徒弟提现一次，师傅都可获得5个专属红包，还等什么，快来摇一摇抢红包吧</p>
+			</div>
+		</div>
+		<!-- 拆红包 -->
+		<div class="get_shake search_shake apart dn">
+			<i>×</i>
+			<h1 class="yellow">新年快乐，恭喜发财</h1>
+			<p class="money">0.10<b>元</b></p>
+			<a>已存入我的余额，注意查收</a>
+			<div class="continue">继续摇一摇</div>
+		</div>
+	</div>
+	<!-- 专属红包提示 -->
+	<h1 class="sexclusive">您还有5个专属红包可以摇一摇</h1>
+	<div class="shake_exclusive">
+		<div class="lantern">
+			<p>看看大家的手气</p>
+		</div>
+		<div class="table">
+			<table>
+				<tr>
+					<td width="45%"><span style='background-image:url(http://7xkdr1.com1.z0.glb.clouddn.com/1f380.png)' class='emojicon-m'></span><span style='background-image:url(http://7xkdr1.com1.z0.glb.clouddn.com/1f380.png)' class='emojicon-m'></span></td>
+					<td width="20%">抢到金币</td>
+					<td width="15%">50个</td>
+					<td width="20%">2分钟前</td>
+				</tr>
+				<tr>
+					<td width="45%">秒赚大钱</td>
+					<td width="20%">抢到红包</td>
+					<td width="15%">0.11元</td>
+					<td width="20%">2分钟前</td>
+				</tr>
+				<tr>
+					<td width="45%">秒赚大钱</td>
+					<td width="20%">抢到红包</td>
+					<td width="15%">0.11元</td>
+					<td width="20%">2分钟前</td>
+				</tr>
+				<tr>
+					<td width="45%">秒赚大钱</td>
+					<td width="20%">抢到红包</td>
+					<td width="15%">0.11元</td>
+					<td width="20%">2分钟前</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- 活动介绍(没有系统红包时显示) -->
+	<div class="jieshao dn">
+		<div class="lantern">
+			<p>活动介绍</p>
+		</div>
+		<div class="search_shake_text">
+			<p>活动日期：2月2日-2月8日</p>
+		</div>
+		<div class="search_shake_text">
+			<p>系统红包：</p>
+			<p>在活动期间，每天11:00,15:00,20:00整点打开红包页摇一摇，系统会发放10000个红包,赶紧来抢吧（每人每轮最多可获得10个系统红包）</p>
+		</div>
+		<div class="search_shake_text">
+			<p>专属红包：</p>
+			<p>在活动期间，每新收一个徒弟并且徒弟完成一个限时任务或者新徒弟提现一次，师傅都可获得5个专属红包，专属红包随时可以摇奖，还等什么，快来摇一摇抢红包吧！</p>
+		</div>
+	</div>
+</div>
+<!-- End 红包 -->
+<script type="text/javascript">
+	$(".get_shake i").click(function(){
+		$(".get_shake_bg").hide();
+	})
+	$(".open_shake").click(function(){
+		$(this).addClass("xuanzhuan");
+		setTimeout(function(){
+        $('.apart').show();
+    },2000);
+	})
+</script>
+</body>
+</html>

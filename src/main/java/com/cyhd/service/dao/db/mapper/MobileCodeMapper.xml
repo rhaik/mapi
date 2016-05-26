@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.MobileCodeMapper" >
+  
+  <insert id="insert" parameterType="mobileCodeDo">
+  INSERT INTO mobile_auth_code 
+  ( mobile ,  code , createtime, estate,validnum) 
+  	VALUES (#{mobile}, #{code}, #{createtime},#{estate},#{validnum});
+  </insert>
+  
+  <select id="getByParam" parameterType="map" resultType="mobileCodeDo">
+  	select  * from   mobile_auth_code  where mobile=#{mobile} and estate=#{estate} order by id desc limit 1
+  </select>
+  
+  <update id="update" parameterType="map">
+  	update mobile_auth_code 
+  	<set>
+  		<if test=" validnum!= null and validnum != ''">
+  			validnum = #{validnum},
+  		</if>
+  		<if test=" estate!= null and estate != ''">
+  			estate = #{estate},
+  		</if>
+  	</set>
+  	where id = #{id}
+  </update>
+  
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.UserBannerMapper">
+
+	<insert id="insert" parameterType="userBanner">
+		<selectKey keyProperty="id" resultType="java.lang.Integer" order="AFTER">SELECT LAST_INSERT_ID() as id</selectKey>
+	    insert into money_banner (ctype, cindex, image, url, content, estate, createtime, updatetime)
+	    values (
+	      #{ctype}, 
+	      #{cindex}, 
+	      #{image}, 
+	      #{url}, 
+	      #{content}, 
+	      #{estate}, 
+	      #{createtime}, 
+	      #{updatetime})
+	</insert>
+
+	
+	<select id="getBanners" resultType="userBanner">
+		select * from money_banner where estate=1 order by cindex asc
+	</select>
+	
+	<select id="countBanners" resultType="int">
+		select count(1) from money_banner where estate=1
+	</select>
+	
+</mapper>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>应用试用</title> 
+	<link rel="stylesheet" type="text/css" href="../css/css.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+    <script type="text/javascript" src="https://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>
+	<style type="text/css">
+		.test_list{padding:0.75em 1.1em; background:#eee; border-bottom:1px solid #dcdcdc; overflow:hidden;}
+		.text_header{width:4.2em; height:4.2em; margin-right:0.5em; display:block; float:left;}
+		.test_left_txt a{font-size:1.3em; color:#000; display:block; margin-top:0.4em;}
+		.test_left_txt span{font-size:0.8em; color:#666; display:block; margin-top:0.5em;}
+		.test_left_txt span em{width:0.85em; height:0.85em; display:inline-block;  background:url(../images/img/icon.png) -6em -2.75em / 20.6em 20.6em; margin-right:0.2em;}
+		.cost{width:4.5em; height:1.9em; line-height:1.9em; border:1px solid #666; border-radius:0.4em; margin-top:1em;}
+		.cost a{font-size:0.9em; color:#666; display:block; text-align:center;}
+		.test .on{background:#fff;}
+		.test .on .cost{border:1px solid #ff8003;}
+		.test .on .cost a{color:#ff8003;}
+		.test .on .ing{float:right; background:#ff8003; margin-top:0.4em;}
+		.test .on .ing a{color:#fff;}
+		.ing_txt{font-size:0.8em; color:#666; margin-top:3.5em;}
+		.tishi_box{width: 100%; height:2.75em; position:fixed; top:0px; left:0; z-index:10;}
+		.active span{font-size:0.9em; color:#fff;}
+		.prompt span{font-size:0.9em; color:#fff;}
+		.active{height:2.75em; line-height:2.75em; background:#fd2351; position:absolute; top:0; left:0; z-index:2; width:100%; text-indent:0.5em;}
+		.active a{float:right; font-size:1.5em; padding-right:0.3em; cursor:pointer; text-align:center; color:#fff;}
+		.prompt{height:2.75em; line-height:2.75em; background:#ff8003; position:absolute; top:0; left:0; width:100%; text-indent:0.5em;}
+		.prompt img{float:right; width:1.75em; padding-top:0.5em; display:block; padding-right:0.5em;}
+	</style>
+</head> 
+<body> 
+	<div class="tishi_box">
+		<div class="active"><span>送钱啦，双十二，秒赚大钱超级收徒狂欢节</span><a>×</a></div>
+		<div class="prompt"><span>任务更新时间通常为11:00、16:00，下午多关注</span><img src="../images/img/mune.png" /></div>
+	</div>
+	<div class="test">
+		<div class="test_list on clearfix">
+			<div class="test_left fl">
+				<div class="text_header"><img width="100%" src="../images/img/ico1.png"></div>
+				<div class="test_left_txt fl">
+					<a>三国之刃</a>
+					<span><em></em>剩余6605份</span>
+				</div>
+			</div>
+			<div class="text_right fr ">
+				<div class="cost"><a>+2.00元</a></div>
+			</div>
+		</div>
+		<div class="test_list on clearfix">
+			<div class="test_left fl">
+				<div class="text_header"><img width="100%" src="../images/img/ico2.png"></div>
+				<div class="test_left_txt fl">
+					<a>我叫MT</a>
+					<span><em></em>剩余130份</span>
+				</div>
+			</div>
+			<div class="text_right fr ">
+				<div class="cost"><a>+2.00元</a></div>
+			</div>
+		</div>
+		<div class="test_list on clearfix">
+			<div class="test_left fl">
+				<div class="text_header"><img width="100%" src="../images/img/ico3.png"></div>
+				<div class="test_left_txt fl">
+					<a>到家</a>
+					<span><em></em>剩余130份</span>
+				</div>
+			</div>
+			<div class="text_right fr clearfix">
+				<div class="cost ing"><a>进行中</a></div>
+				<p class="ing_txt">下载完成等待试用</p>
+			</div>
+		</div>
+		<div class="test_list clearfix">
+			<div class="test_left fl">
+				<div class="text_header"><img width="100%" src="../images/img/ico4.png"></div>
+				<div class="test_left_txt fl">
+					<a>到家</a>
+					<span><em></em>剩余0份</span>
+				</div>
+			</div>
+			<div class="text_right fr ">
+				<div class="cost"><a>+2.00元</a></div>
+			</div>
+		</div>
+		<div class="test_list clearfix">
+			<div class="test_left fl">
+				<div class="text_header"><img width="100%" src="../images/img/ico5.png"></div>
+				<div class="test_left_txt fl">
+					<a>汽车</a>
+					<span><em></em>剩余0份</span>
+				</div>
+			</div>
+			<div class="text_right fr ">
+				<div class="cost"><a>+2.00元</a></div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+	var w=$('.active').width();
+		$('.active').css({"marginLeft":-w});
+	setTimeout(function () { 
+		$('.active').stop().animate({"margin-left":"0"},1000);
+    }, 3000);
+	$('.active a').click(function(){
+		$('.active').hide();
+	})
+</script>
+</body> 
+</html> 

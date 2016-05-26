@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>商品详情</title> 
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/duobao.css">
+    <link rel="stylesheet" type="text/css" href="../../css/swiper.min.css">
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/countdown.js"></script>
+</head> 
+<body>
+<div class="pb_btn">
+    <!-- 中间内容 -->
+    <div class="prize_box">
+        <a class="prize_pic">
+            <span><img width="100%" src="../../images/duobao/images5.jpg" /></span>
+            <p class="look">查看奖品详情</p>
+        </a>
+        <div class="states">
+            <!-- 进行中 -->
+            <div class="prize_infor dn">
+                <!-- on是进行中，over是已揭晓，ing是揭晓中 -->
+                <h1><em class="on">进行中</em>(第20期)Apple Watch 42毫米不锈钢表壳搭 配运动型表带</h1>
+                <div class="surplus">
+                    <div class="bar_big"><div class="bar_sma"></div></div>
+                    <div class="num_tit clearfix">
+                        <p class="fl">总需：5000</p>
+                        <p class="fr">剩余：<span>320</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- 揭晓中 -->
+            <!-- 显示倒计时时底下立即夺宝变为确认支付 -->
+            <div class="prize_infor">
+                <h1><em class="ing">揭晓中</em>(第20期)Apple Watch 42毫米不锈钢表壳搭 配运动型表带</h1>
+                <div class="soon_see clearfix">
+                    <span class="fl">倒计时</span>
+                    <div class="countdown fl" id="fnTimeCountDown1" data-end="2016/2/30 18:45:13">
+                        <span class="mini">01</span><span>分</span><span class="sec">30</span><span>秒</span><span class="hm">147</span>
+                    </div>
+                    <a class="fr">查看计算详情<em><img src="../../images/img/right_ico.png"></em></a>
+                </div>
+            </div>
+            <!-- 已揭晓 -->
+            <!-- 显示倒计时时底下立即夺宝变为确认支付 -->
+            <div class="prize_infor dn">
+                <h1><em class="over">已揭晓</em>(第20期)Apple Watch 42毫米不锈钢表壳搭 配运动型表带</h1>
+                <div class="soon_see clearfix">
+                    <span class="fl">中奖号</span>
+                    <div class="countdown fl">
+                        <span class="mini">100020036</span>
+                    </div>
+                    <a href="prizeCount.html" class="fr">查看计算详情<em><img src="../../images/img/right_ico.png"></em></a>
+                </div>
+                <div class="winning">
+                    <div class="win_head"><img src="../../images/img/head_pic.png"></div>
+                    <div class="win_txt">
+                        <p>中奖用户：<span style="background-image:url(http://7xkdr1.com1.z0.glb.clouddn.com/1f300.png)" class="emojicon-m"></span>CC月月<span style="background-image:url(http://7xkdr1.com1.z0.glb.clouddn.com/1f36d.png)" class="emojicon-m"></span></p>
+                        <p>手机号码：131****0806</p>
+                        <p>参与人次：5</p>
+                        <p>揭晓时间：10分钟前</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <!-- <div class="not_join">您还没有参加，赶快参加吧</div> -->
+    </div>
+        
+    <!-- 列表 -->
+    <div class="prize_list">
+        <a href="pastReveal.html">往期揭晓<span><img src="../../images/img/right_ico.png" /></span></a>
+        <a href="shaidan.html">往期晒单<span><img src="../../images/img/right_ico.png" /></span></a>
+    </div>
+
+    <!-- 参与记录 -->
+    <div class="record_box">
+        <span class="join_record">参与记录</span>
+        <div class="record_num">
+            <div class="record_list">
+                <div class="record_img"><img src="../../images/img/head_pic.png" /></div>
+                <div class="record_txt">
+                    <h1><span style="background-image:url(http://7xkdr1.com1.z0.glb.clouddn.com/1f300.png)" class="emojicon-m"></span>CC月月<span style="background-image:url(http://7xkdr1.com1.z0.glb.clouddn.com/1f36d.png)" class="emojicon-m"></span></h1>
+                    <p>中国浙江宁波 IP:111.***.111</p>
+                    <p>参与4人次 2015-09-10 15:22:18.123</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="foot_btn">
+        <a>立即夺宝</a>
+    </div>
+</div>
+<!-- 调整购买人数 -->
+<div class="popup_bg dn">
+    <div class="number_box fixed_bot">
+        <h1>调整购买人次</h1>
+        <div class="number_ipt clearfix">
+            <a class="jian">－</a>
+            <div class="text_num"><input value="1234" type="text" /></div>
+            <a class="jia">＋</a>
+        </div>
+        <div class="popup_bot">
+            <div class="bot_btn on"><a>确定</a></div>
+            <div class="bot_btn"><a>取消</a></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    /*点击立即夺宝弹出调整购买人次*/
+    $(".foot_btn a").click(function(){
+        $(".popup_bg").removeClass("dn");
+    })
+    $(".bot_btn").click(function(){
+        $(".popup_bg").addClass("dn");
+    })
+
+    /*点击加减按钮改变购买人次*/
+    $(".jia").click(function(){ 
+        var val=$(".text_num input").val();
+        var value= parseInt(val);
+            value=value+1;
+            $(".text_num input").val(value); 
+    })
+    $(".jian").click(function(){ 
+        var val=$(".text_num input").val();
+        var value= parseInt(val);
+            value=value-1;
+            $(".text_num input").val(value); 
+    }) 
+</script>
+<script type="text/javascript">
+    $("#fnTimeCountDown1").countDown();
+
+</script>
+</body> 
+</html> 
+ 

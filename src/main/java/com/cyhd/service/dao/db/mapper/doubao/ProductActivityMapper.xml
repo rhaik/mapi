@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.doubao.ProductActivityMapper" >
+
+    <select id="getUserJoinedActivities"  parameterType="int" resultType="com.cyhd.service.dao.po.doubao.ProductActivity">
+        select pa.* from money_product_activity pa
+        <where>
+            <choose>
+                <when test="param2 == 10">
+                    status=3 AND lottery_user = #{0}  Order By lottery_time Desc
+                </when>
+                <otherwise>
+                	<if test="param2 == 5"> status = 5 </if>
+                    <if test="param2 == 3"> status = 3 </if>
+                    <if test="param2 == 1"> (status = 1 or status = 2) </if>
+                    AND lottery_user != #{0}
+                    AND exists (select 1 from money_order_product op where op.user_id = #{0} AND op.product_activity_id = pa.id)
+                    Order By pa.id desc
+                </otherwise>
+            </choose>
+        </where>
+        Limit #{2},#{3}
+    </select>
+
+    <select id="countUserJoinedActivites" parameterType="int" resultType="int">
+        select count(1) from money_product_activity pa
+        <where>
+            <choose>
+                <when test="param2 == 10">
+                    status=3 AND lottery_user = #{0}
+                </when>
+                <otherwise>
+                	<if test="param2 == 5"> status = 5 </if>
+                    <if test="param2 == 3"> status = 3 </if>
+                    <if test="param2 == 1"> (status = 1 or status = 2) </if>
+                    AND lottery_user != #{0}
+                    AND exists (select 1 from money_order_product op where op.user_id = #{0} AND op.product_activity_id = pa.id)
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+</mapper>

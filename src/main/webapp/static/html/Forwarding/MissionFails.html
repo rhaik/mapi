@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>任务失败</title> 
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<style type="text/css">
+		table{border-collapse:collapse;border-spacing:0;}
+		.header{width:100%; height:3.3em; text-align:center; line-height:3.3em; background:#19191f; position:relative; z-index:2;}
+		.header span{font-size:1.3em; color:#fff;}
+		.header a{position:absolute; top:0; left:0.75em; height:3em; line-height:3em; font-size:1.1em; color:#fff; background:url(../../images/img/left_icon.png) 0.2em 0.85em / 0.82em 1.4em no-repeat; padding-left:1.2em;}
+		/* .mune a{width:2.6em; height:2.6em; display:none; position:fixed; top:3.9em; right:0.9em; background:rgba(0,0,0,.8) url(../../images/img/mune.png) no-repeat; background-size:100%; border-radius:0.2em; z-index:9;}
+		.mune span{width:2.6em; height:2.6em; display:block; position:fixed; top:3.9em; right:0.9em; background:url(../../images/img/mune.png) no-repeat; background-size:100%; border-radius:0.2em; z-index:9;}
+		.mune_box{width:100%; height:3.9em; overflow:hidden; background:rgba(0,0,0,.8); float:right; position:fixed; top:3.3em;}
+		.mune_box p{margin:1em 5.5em 0em 0.9em; line-height: 1.8em; font-size:0.625em; color:#fff; } */
+		.footer{width:100%; position:fixed; bottom:0; left:0; background:rgba(0,0,0,.85); z-index:2;}
+		.foot_left{width:12em; height:2.625em; overflow:hidden; margin:0.75em 0 0.75em 0.9em;}
+		.foot_left p{font-size:0.75em; color:#fff; line-height:1.9em;}
+		.btn{width:7em; height:2.3em; line-height:2.3em; background:#ff8003; border-radius:0.3em; margin-top:1.2em; margin-right:0.9em;}
+		.btn a{font-size:0.9em; display:block; text-align:center;}
+		/* .popup_bg{width:100%; height:100%; position:fixed; top:0; left:0; background:rgba(0,0,0,.2);}
+		.popup_box{width:18.7em; height:15.8em; position:fixed; top:50%; left:50%; margin:-7.9em 0 0 -9.35em; background:#fff; border-radius:0.3em;}
+		.popup_box h1{font-size:1.3em; color:#000; text-align:center; font-weight:normal; margin:1em 0 0.5em;}
+		.popup_box p{padding:0.5em 2em; font-size:1.04em; color:#333; text-align:left; line-height:1.5em;}
+		.button{width:15em; height:2.25em; line-height:2.25em; text-align:center; border-radius:0.3em; margin:1em auto; background:#ff8003;}
+		.button a{font-size:1.12em; display:block;} */
+		.tishi_btn{width:2.2em; height:2.2em; display:block; background:#ff8003; border-radius:2.2em; position:fixed; top:3.9em; right:0.9em;}
+		.tishi_bg{width:100%; height:100%; background:rgba(0,0,0,.5); position:fixed; top:0; left:0;}
+		.tishi_con{width:18em; height:12em; background:#fff; border-radius:0.8em; position:fixed; top:50%; left:50%; margin:-6em 0 0 -9em;}
+		.tishi_close{width:2.2em; height:2.2em; line-height:2.2em; text-align:center; background:#d4d4d4; position:fixed; top:3.9em; right:0.9em; border-radius:2.2em; z-index:9;}
+		.tishi_close a{color:#ff8003; font-size:2em; }
+		.tishi_con table tr td{font-size:0.75em; padding:0.9em 0; text-align:center; color:#000;}
+		.tishi_con table tr:first-child{border-bottom:1px solid #dcdcdc; color:#000;}
+		.tishi_con table tr:first-child td:last-child{color:#000;}
+		.tishi_con table tr:first-child td{text-align:center; font-size:0.9em;}
+		.tishi_con table tr td:last-child{color:#e60012;}
+	</style>
+</head> 
+<body style="overflow-y:hidden"> 
+<!-- header -->
+<header class="header">
+	<a>首页</a>
+	<span>分享任务</span>
+</header>
+<!-- 菜单按钮 -->
+<div class="tishi_box">
+	<div class="tishi_btn"><img src="../../images/img/mune.png"></div>
+	<div class="tishi_bg">
+		<div class="tishi_close"><a>×</a></div>
+		<div class="tishi_con">
+			<table width="100%">
+				<tr>
+					<td width="50%">达到阅读人数</td>
+					<td width="50%">获得奖励</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>0.1</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>0.5</td>
+				</tr>
+				<tr>
+					<td>20</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>50</td>
+					<td>2</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- <div class="mune">
+	<a></a>
+	<span></span>
+	<div class="mune_box">
+		<p>任务规则：分享文章到朋友圈，请在24小时内阅读数达到 5人即可获得现金奖励！</p>
+	</div>
+</div> -->
+
+
+<!-- 中间内容 -->
+<div class="con">
+	<iframe id="iframe" src="http://mp.weixin.qq.com/s?__biz=MzA5ODgzNjMwMg==&mid=209554259&idx=5&sn=e2dda3a8f50e23f8f048471504fe86be&scene=0&key=dffc561732c22651f988f29ac561dce3bf53f27e16eb847fa83db0593b2b8aa00d390b284758aa7f9231ce6bbee0a82e&ascene=0&uin=MTAyNzAxOTMwMA%3D%3D&devicetype=iMac+MacBookPro11%2C4+OSX+OSX+10.10.4+bui" frameBorder="0" width="100%" scrolling="yes"></iframe>
+</div>
+<!-- 弹框 -->
+<!-- <div class="popup_bg dn">
+	<div class="popup_box">
+		<h1>任务失败</h1>
+		<p>您于2015-08-26任务已过期，未能在规定时间内完成。</p>
+		<div class="button"><a>返回任务列表</a></div>
+		<div class="button"><a>查询我的收入</a></div>
+	</div>
+</div> -->
+<!-- 底部 -->
+<footer class="footer clearfix">
+	<div class="foot_left fl">
+		<p>分享成功后，将在10月24日12:00根据阅读人数统一发放奖励 </p>
+	</div>
+	<div class="btn fr">
+		<a>转发到朋友圈</a>
+	</div>
+</footer>
+
+<script type="text/javascript">
+	$(".tishi_btn").click(function(){
+		$(".tishi_bg").fadeToggle(false)
+	})
+	$(".tishi_close").click(function(){
+		$(".tishi_bg").fadeToggle(false)
+	})
+	
+	var hei=$(window).height();
+	$("#iframe").css({"height":hei});
+</script>
+</body> 
+</html> 

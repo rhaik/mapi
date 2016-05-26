@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name = "format-detection" content="telephone = no" />
+	<title>支付宝提现</title>
+	<script type="text/javascript" src="https://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>
+	<style type="text/css">
+		body{background:#f0eff5;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;color:#000;margin:0;padding:0;}
+		.header{width:100%; height:2.75em; line-height:2.75em; text-align:center; background:#19191f; position:relative; z-index:2;}
+		.header span{font-size:1.3em; color:#fff;}
+		.header .back{width:0.8em; display:block; position:absolute; top:0.6em; left:10px;}
+		.bill_box{display:block;}
+		.bill_box em{display: block;}
+		.bill_box .amount li.on{border: 1px solid #ff8003;}
+		.bill_box .amount li.on a,.bill_on .amount li.on span{color: #ff8003;}
+		.bill_box .amount li.disabled {background:#eee;}
+		.bill_box .amount li a{height: 25px; line-height: 25px; margin-top: 12px;}
+		.bill_box .amount li span{display: block;}
+		.bill_box .amount li i{color:#ff8103;}
+		.bill_box .bill_btn a{background: #ff8003;}
+		.amount {padding: 15px 15px 0; overflow: hidden; background:#fff; margin:0;}
+		.amount li{width: 30%; height: 65px; border: 1px solid #ddd; display: block; float: left; background: #fff; margin-right: 3.4%; margin-bottom: 15px; overflow: hidden;}
+		.amount li a{display: block; height: 65px; line-height: 65px; text-align: center; font-size: 18px; color: #aaa;}
+		.amount li span{display: none; font-size: 12px; color: #aaa; text-align: center;}
+		.amount li:nth-child(3n){margin-right: 0;}
+		.bill_btn{margin:0 15px; padding-bottom:15px;}
+		.bill_btn a{display: block; background:#ff8003; line-height: 45px; text-align: center; border-radius: 5px; font-size: 17px; color: #fff;}
+		.bill_btn.grey a{background:#d2d2d2;}
+		.account_balance{padding:15px; border-top:1px solid #dcdcdc; font-size:1em; color:#222;}
+		.tishi{padding:0 15px 15px; font-size:0.94em; color:#999; line-height:1.3em;}
+		.tishi i{color:#ff0000; font-style:normal; line-height:1.3em;}
+		.tixian_bg{position:fixed; left:0; bottom:0; width:100%;background:#fff;}
+		.way{height:3em; margin:0 auto;}
+		.way p{width:50%; line-height:2.5em; text-align:center; float:left; font-size:1.1em; color:#000; margin:0; border-left:1px solid #dcdcdc; margin-left:-1px; background:#ececec;}
+		.way p.on{background:#fff;}
+		.validate{margin:0 15px 15px; overflow:hidden; padding:0 125px 0 72px;}
+		.validate span{font-size:17px; line-height:40px; color:#099999; display:block; float:left; margin-left:-72px;}
+		.validate input{width:90%; height:33px; line-height:33px; background:#fff; border:1px solid #bfbfbf; float:left; outline:none; text-align:center; font-size:16px; color:#000;}
+		.validate a{width:108px; height:40px; display:block; float:right; border:1px solid #bfbfbf; margin-right:-125px;}
+	</style>
+</head> 
+<body> 
+<div class="tixian_bg">
+	<div class="way">
+		<p class="on"><a>支付宝</a></p>
+		<p><a>微信</a></p>
+	</div>
+	<div class="content">
+		<div class="bill_box">
+			<ul class="amount">
+				<li>
+					<a>10元</a>
+					<span>不反金币</span>
+				</li>
+				<li class="on">
+					<a>12元</a>
+					<span>返<i>200</i>金币</span>
+				</li>
+				<li>
+					<a>15元</a>
+					<span>返<i>200</i>金币</span>
+				</li>
+				<li>
+					<a>20元</a>
+					<span>返<i>500</i>金币</span>
+				</li>
+				<li>
+					<a>30元</a>
+					<span>返<i>500</i>金币</span>
+				</li>
+				<li>
+					<a>50元</a>
+					<span>返<i>500</i>金币</span>
+				</li>
+			</ul>
+			<div class="tishi">一个工作日到账，周末及节假日不处理提现业务<br/>
+				支付宝扣除手续费1元，实际到账共<i id="real-amount">11</i>元,<i>200</i>金币<br/>返还的金币将在提现成功后打入您的账户
+			</div>
+		</div>
+		<div class="bill_box" style="display:none">
+			<ul class="amount">
+				<li>
+					<a>10元</a>
+					<span>不反金币</span>
+				</li>
+				<li class="on">
+					<a>15元</a>
+					<span>返<i>200</i>金币</span>
+				</li>
+				<li>
+					<a>20元</a>
+					<span>返<i>200</i>金币</span>
+				</li>
+				<li>
+					<a>30元</a>
+					<span>返<i>500</i>金币</span>
+				</li>
+				<li>
+					<a>50元</a>
+					<span>返<i>500</i>金币</span>
+				</li>
+				<li>
+					<a>100元</a>
+					<span>返<i>500</i>金币</span>
+				</li>
+			</ul>
+			<div class="tishi" style="display:none;">一个工作日到账，周末及节假日不处理提现业务<br/>
+				实际到账共<i id="real-amount">15</i>元,<i>200</i>金币<br/>返还的金币将在提现成功后打入您的账户
+			</div>
+			<div class="tishi">一个工作日到账，周末及节假日不处理提现业务<br/>
+				<i>抱歉，秒赚大钱今日微信提现总额已达上限，请您暂时使用支付宝提现</i>
+			</div>
+		</div>
+	</div>
+	<div class="validate">
+		<span>验证码:</span>
+		<input type="text" />
+		<a></a>
+	</div>
+	<div class="bill_btn grey"><a>立即提现</a></div>
+</div>
+<script type="text/javascript">
+	$(".way p").click(function(){
+		$(this).addClass("on").siblings().removeClass("on");
+		var index=$(this).index();
+		$(".bill_box").eq(index).show().siblings().hide();
+	})
+</script>
+</body> 
+</html> 

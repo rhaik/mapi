@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.UserHomePageMenuMapper">
+
+	<insert id="insert" parameterType="com.cyhd.service.dao.po.UserHomePageMenu">
+		<selectKey keyProperty="id" resultType="java.lang.Integer" order="AFTER">SELECT LAST_INSERT_ID() as id</selectKey>
+	    insert into money_home_menu (ctype, cindex, logo, link, title, estate,client_show, createtime, updatetime)
+	    values (
+	      #{ctype}, 
+	      #{cindex}, 
+	      #{logo}, 
+	      #{link}, 
+	      #{title}, 
+	      #{estate}, 
+	      #{client_show},
+	      #{createtime}, 
+	      #{updatetime})
+	</insert>
+	
+	<select id="getHomePageMenus" resultType="com.cyhd.service.dao.po.UserHomePageMenu">
+		select * from money_home_menu where estate=1 order by cindex asc
+	</select>
+	
+	<select id="countHomePageMenus" resultType="int" parameterType="int">
+		select count(1) from money_home_menu  where (client_show=#{0} or client_show=3) and estate=1 
+	</select>
+	
+</mapper>

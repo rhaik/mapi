@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.PropertiesMapper" >
+  
+  <insert id="insert" parameterType="properties" >
+    insert into money_properties (
+      ckey, scope, cvalue, estate, createtime, updatetime)
+    values (
+      #{ckey}, 
+      #{scope}, 
+      #{cvalue}, 
+      #{estate}, 
+      #{createtime}, 
+      #{updatetime})
+    on duplicate key update
+    	cvalue=#{cvalue},
+    	estate=#{estate},
+    	updatetime=#{updatetime}
+  </insert>
+  
+  <select id="gets" resultType="properties" parameterType="string">
+  	select * from money_properties where scope = #{0}
+  </select>
+  
+  <select id="get" resultType="properties" parameterType="string" >
+    select * from money_properties where ckey=#{0} and scope = #{1}
+  </select>
+</mapper>

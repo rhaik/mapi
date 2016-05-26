@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<title>编辑个人信息</title> 
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/duobao.css">
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+</head> 
+<body>
+<div class="bg_f">
+	<a class="edit_infor edit_header">
+		<span>头像</span>
+		<p><i><img src="../../images/img/head_pic.png" /></i><em><img src="../../images/img/right_ico.png"></em></p>
+	</a>
+	<a class="edit_infor">
+		<span>用户ID</span>
+		<p>ID:12345678</p>
+	</a>
+	<a class="edit_infor edit_name">
+		<span>用户名</span>
+		<p><b>必中大奖</b><em><img src="../../images/img/right_ico.png"></em></p>
+	</a>
+	<a class="edit_infor">
+		<span>电话</span>
+		<p>13522050806<em><img src="../../images/img/right_ico.png"></em></p>
+	</a>
+</div>
+<!-- 修改信息 -->
+<div class="modify dn">
+	<p><input type="text" placeholder="输入昵称" /></p>
+	<a>确定</a>
+</div>
+<script type="text/javascript">
+	$(".edit_name").click(function(){
+		$(this).parent().addClass("dn");
+		$(".modify").removeClass("dn");
+	})
+	$(".modify a").click(function(){
+		$(this).parent().addClass("dn");
+		$(".edit_name").parent().removeClass("dn");
+		var val=$(".modify p input").val();
+		$(".edit_name p b").text(val);
+	})
+</script>
+</body> 
+</html> 

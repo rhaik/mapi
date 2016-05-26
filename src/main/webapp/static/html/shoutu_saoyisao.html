@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head> 
+<meta charset="utf-8"> 
+<title>扫一扫收徒</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<!-- <link rel="stylesheet" type="text/css" href=" ../css/css.css"> -->
+<link rel="stylesheet" type="text/css" href=" ../css/common.css">
+<style type="text/css">
+body{background:#fff;}
+.shao_top{margin:1.5em 0 0 2.5em; overflow:hidden;}
+.shao_top_pic{width:3.75em;}
+.shao_top span{width:12.5em; height:1.875em; line-height:1.875em; text-align:center; border:1px solid #ff8003; border-radius:0.3em; background:#fff; display:inline-block; font-size:0.9em; color:#ff8003; margin:1.2em 0 0 1.56em;}
+.ewm{width:245px; height:245px; margin:1.8em auto; position:relative; background:url(../images/img/ewm_bor.png) 0 0 / 100% 100% no-repeat;}
+.ewm img{width:13em; position:absolute; top:50%; left:50%; margin:-6.5em 0 0 -6.5em;}
+.step{padding:0 1.7em;}
+.step p{font-size:0.93em; color:#666; line-height:1.5em;}
+.step .stressed {color:red;}
+</style> 
+</head> 
+<body> 
+<div class="shao_top">
+	<div class="shao_top_pic fl">
+		<img width="100%" src="../images/img/logo.png" />
+	</div>	
+	<span>扫一扫,来到秒赚大家庭</span>
+</div>
+<div class="ewm">
+	<div id="ewm-panel"></div>
+</div>
+<div class="step">
+	<p>1、长按图片保存到手机，在微信中发送到朋友圈或直接发给朋友</p>
+	<p>2、朋友用苹果手机扫描或识别二维码，下载App并登录即成为你的徒弟</p>
+	<p class="stressed">注意：本收徒方式只支持收取苹果手机用户为徒弟</p>
+</div>
+<script type="text/javascript" src="../js/qrcode.min.js"></script>
+<script type="text/javascript">
+var pos = location.href.indexOf('u=');
+var u = 0;
+if(pos > 0){
+	u = parseInt(location.href.substring(pos + 2));
+}
+var qrcode = new QRCode("ewm-panel", {
+    text: "https://api.miaozhuandaqian.cn/?u=" + u,
+    width: 240,
+    height: 240,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
+</script>
+</body> 
+</html> 

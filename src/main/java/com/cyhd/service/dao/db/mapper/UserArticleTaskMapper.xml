@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.UserArticleTaskMapper" >
+  
+  <select id="getUserArticleTasksByTaskIds" parameterType="int" resultType="com.cyhd.service.dao.po.UserArticleTask">
+  	select  * from  money_user_article_task  where user_id=#{0} 
+  		and article_task_id in 
+  		<foreach item="item" index="index" collection="param2" open="(" separator="," close=")">
+           #{item}
+        </foreach>
+  </select>
+  
+  <select id="getUserArticleTasksByArticleIds" parameterType="int" resultType="com.cyhd.service.dao.po.UserArticleTask">
+  	select  * from  money_user_article_task  where user_id=#{0} 
+  		and article_id in 
+  		<foreach item="item" index="index" collection="param2" open="(" separator="," close=")">
+           #{item}
+        </foreach>
+      order by starttime desc
+  </select>
+  
+</mapper>

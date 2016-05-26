@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="cyhd" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>任务详情页-猎奇赚钱</title> 
+        <link rel="stylesheet" type="text/css" href="../frozenui/1.2.1/css/frozen.css">
+        <style>
+			.ui-tab-nav li{font-size:18px;}
+			.ui-avatar-thumb img{width:53px;height:50px;}
+			.ui-thumb-text {margin:14px 24px 0 20px;font-size:18px}
+			.ui-list-thumb{margin:5px 10px 0px 0px;}
+			.ui-list-info{font-size:20px;}
+			.ui-list-action{margin-top:-14px;font-size: 20px;}
+		</style>
+		<script src="https://lib.sinaapp.com/js/zepto/1.0/zepto.min.js"></script>
+        <script src="../frozenjs/1.0.1/frozen.js"></script> 
+    </head>
+<body>
+<div class="ui-tab">
+    <ul class="ui-tab-nav ui-border-b">
+        <li  class="current">本月排行</li>
+        <li>总排行</li>
+    </ul>
+    <div style="height: 16px;"></div>
+    <ul class="ui-tab-content">
+        <li>
+        	<ul class="ui-list ui-border-tb">
+			    <li class="ui-border-t">
+			    	<div class="ui-avatar-thumb">
+			           <img src="../images/rank_01.png" />
+			        </div>
+			        <div class="ui-list-thumb">
+			            <span style="background-image:url(../images/rank_avatar.png);width:44px;height:44px;border-radius:10px;"></span>
+			        </div>
+			        <div class="ui-list-info">
+			            <h1>用户名称</h1>
+			        </div>
+			        <div class="ui-list-action ui-txt-warning">￥0</div>
+			    </li>
+			    <li class="ui-border-t">
+			    	<div class="ui-avatar-thumb">
+			           <img src="../images/rank_02.png" />
+			        </div>
+			        <div class="ui-list-thumb">
+			            <span style="background-image:url(../images/rank_avatar.png);width:44px;height:44px;border-radius:10px;"></span>
+			        </div>
+			        <div class="ui-list-info">
+			            <h1>用户名称</h1>
+			        </div>
+			        <div class="ui-list-action ui-txt-warning">￥0</div>
+			    </li>
+			    <li class="ui-border-t">
+			    	<div class="ui-avatar-thumb">
+			           <img src="../images/rank_03.png" />
+			        </div>
+			        <div class="ui-list-thumb">
+			            <span style="background-image:url(../images/rank_avatar.png);width:44px;height:44px;border-radius:10px;"></span>
+			        </div>
+			        <div class="ui-list-info">
+			            <h1>用户名称</h1>
+			        </div>
+			        <div class="ui-list-action ui-txt-warning">￥0</div>
+			    </li>
+			    <li class="ui-border-t">
+			    	<div class="ui-avatar-thumb ui-thumb-text">4</div>
+			        <div class="ui-list-thumb">
+			            <span style="background-image:url(../images/rank_avatar.png);width:44px;height:44px;border-radius:10px;"></span>
+			        </div>
+			        <div class="ui-list-info">
+			            <h1>用户名称</h1>
+			        </div>
+			        <div class="ui-list-action ui-txt-warning">￥0</div>
+			    </li>
+			</ul>
+        </li>
+        <li>
+        	<ul class="ui-list ui-border-tb">
+			    <li class="ui-border-t">
+			    	<div class="ui-avatar-thumb">
+			           <img src="../images/rank_01.png" />
+			        </div>
+			        <div class="ui-list-thumb">
+			            <span style="background-image:url(../images/rank_avatar.png);width:44px;height:44px;border-radius:10px;"></span>
+			        </div>
+			        <div class="ui-list-info">
+			            <h1>用户名称</h1>
+			        </div>
+			        <div class="ui-list-action ui-txt-warning">￥0</div>
+			    </li>
+			</ul>
+        </li>
+    </ul>
+</div>
+<div class="ui-btn-group ui-btn-group-bottom" style="display:block;">
+	<ul id="sharePage" class="ui-list ui-list-function ui-border-t" data-url="">
+	    <li class="ui-border-t ui-list-item-link">
+	        <div class="ui-list-thumb" style="margin:8px 25px 10px 0px;">
+	            <img src="../images/rank_avatar.png" style="width:54px;height:54px;border-radius:10px;" />
+	        </div>
+	        <div class="ui-list-info">
+	            <h4 style="font-size:22px;color:#000000;margin-top:10px;">用户名称</h4>
+	            <div style="margin-top:4px;font-size:18px;color:#666666">财富：<span style="color:#e60012">￥1</span></div>
+	        </div>
+	    </li>
+	    <li class="ui-border-t">
+	        <div class="ui-badge-wrap" style="font-size:18px;color:#666666;width: 50%;line-height: 40px;">我的本月排名</div>
+	        <div class="ui-badge-wrap" style="font-size:18px;color:#666666;width: 50%;line-height: 40px;">我的总排名</div>
+	    </li>
+		<li>
+	        <div class="ui-badge-wrap" style="font-size:25px;color:#000000;width: 50%;line-height: 25px;">1</div>
+	        <div class="ui-badge-wrap" style="font-size:25px;color:#000000;width: 50%;line-height: 25px;">2</div>
+	    </li>
+	</ul>
+</div>
+<script>
+$(function(){
+    var tab = new fz.Scroll('.ui-tab', {
+        role: 'tab',
+        autoplay: false,
+    });
+
+    tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+        console.log(fromIndex, toIndex)
+    });
+
+    tab.on('scrollEnd', function() {
+        console.log('end')
+    });
+});
+</script>
+</body>
+</html>

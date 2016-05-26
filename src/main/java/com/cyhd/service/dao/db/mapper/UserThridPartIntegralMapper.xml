@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyhd.service.dao.db.mapper.UserThridPartIntegralMapper">
+
+	<insert id="insert" parameterType="com.cyhd.service.dao.po.UserThridPartIntegral">
+		<selectKey keyProperty="id" resultType="java.lang.Integer" order="AFTER">SELECT LAST_INSERT_ID() as id</selectKey>
+	    insert into money_user_thrid_part_integral 
+	    (user_id, adv_id,app_id, `key`,udid,open_udid,bill,points,ad_name,status,activate_time
+	    ,order_id,random_code,ip,source,createtime,client_type,trade_type,itunes_id)
+	    values (
+	      #{user_id}, 
+	      #{adv_id}, 
+	      #{app_id}, 
+	      #{key}, 
+	     #{udid},#{open_udid},#{bill},#{points},#{ad_name},#{status},#{activate_time},
+	     #{order_id},#{random_code},#{ip},#{source},now(),#{client_type},#{trade_type},#{itunes_id}
+	      )
+	</insert>
+	
+	<select id="getIntegralByUser" resultType="com.cyhd.service.dao.po.UserThridPartIntegral" parameterType="int">
+		select * from money_user_thrid_part_integral where user_id=#{userId}
+	</select>
+</mapper>

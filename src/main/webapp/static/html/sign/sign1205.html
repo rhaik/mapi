@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>签到</title> 
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<style type="text/css">
+		/* 公共部分开始 */
+		body{background:#fff;}
+		.header{width:100%; height:2.75em; line-height:2.75em; text-align:center; background:#19191f; position:relative; z-index:2;}
+		.header span{font-size:1.3em; color:#fff;}
+		.header .back{width:0.8em; display:block; position:absolute; top:0.6em; left:10px;}
+		/* 公共部分结束 */
+		.con_top{border-bottom:2px solid #dcdcdc; padding:15px;}
+		.logo_pic{width:2.8em; height:2.8em; margin-right:0.625em;}
+		.logo_txt span{font-size:1.1em; color:#000; display:block;}
+		.logo_txt p{font-size:0.875em; font-size:#000; margin-top:0.1em;}
+		.logo_txt p i{color:#e60012; font-style:normal;}
+		.sign_btn{width:5.3em; height:1.875em; line-height:1.875em; text-align:center; background:#ff8003; border-radius: 0.3em; margin-top:0.5em;}
+		.sign_btn a{font-size:1.125em; display:block;}
+		.sign_date{margin-top:15px; padding-top:15px; border-top:1px solid #dcdcdc;}
+		.sign_date span{float:left; font-size:0.875em; color:#000;}
+		.sign_date a{float:right; font-size:0.75em; color:#666; display:inline-block;}
+		.sign_date a em{width:0.375em; height:0.625em; display:inline-block; margin-left:0.2em;}
+		.tab{padding:15px 15px 0; border-bottom:2px solid #dcdcdc;}
+		.tab_top{font-size:0.75em; color:#ff8003; padding:10px 0; border-bottom:1px solid #dcdcdc;}
+		.tab_liist{width:100%; display:inline-block; padding:0.5em 0; border-bottom:1px solid #dcdcdc;}
+		.tab_liist p{width:50%; text-align:center; font-size:1em; line-height:1em; float:left; color:#000;}
+		.tab_liist:first-child p{font-size:0.9em;}
+		.tab_liist:last-child{border:none;}
+		.tab_liist p.col_h{color:#e60012;}
+		.tab_liist p a{background:#ff3803; font-size:0.75em; color:#fff; padding:0.1em 0.2em; border-radius:0.5em; position:absolute; right:2%; top:-1em; display:block;}
+		.explain{margin:10px;}
+		.explain h1{font-size:1em; color:#000; font-weight:normal; padding-bottom:2px;}
+		.explain p{font-size:0.875em; color:#000; line-height:1.6em;}
+	</style>
+</head> 
+<body>
+<!-- header -->
+<header class="header">
+	<a class="back"><img width="100%" src="../../images/duobao/back_btn.png" /></a>
+	<span>每日签到</span>
+</header>
+<div class="content">
+	<div class="con_top">
+		<div class="con_box clearfix">
+			<div class="con_logo clearfix fl">
+				<div class="logo_pic fl"><img width="100%" src="../../images/sign/logo.png" /></div>
+				<div class="logo_txt fl">
+					<span>每日签到赚金币</span>
+					<p>签到累计奖励：<i>100</i></p>
+				</div>
+			</div>
+			<div class="sign_btn fr"><a>立即签到</a></div>
+		</div>
+		<div class="sign_date clearfix">
+			<span>连续签到天数：10天</span>
+			<a>查看签到历史<em><img width="100%" src="../../images/sign/right.png" /></em></a>
+		</div>
+	</div>
+	<div class="tab">
+		<div class="tab_top">今日奖励金币60,再连续签到5日既可获得更多奖励</div>
+		<div class="tab_liist">
+			<p>连续签到天数</p>
+			<p class="posi_r">签到奖励金币<a>+1.5倍</a></p>
+		</div>
+		<div class="tab_liist">
+			<p>1</p>
+			<p class="col_h">60</p>
+		</div>
+		<div class="tab_liist">
+			<p>2</p>
+			<p class="col_h">80</p>
+		</div>
+		<div class="tab_liist">
+			<p>3</p>
+			<p class="col_h">100</p>
+		</div>
+		<div class="tab_liist">
+			<p>4</p>
+			<p class="col_h">120</p>
+		</div>
+		<div class="tab_liist">
+			<p>5</p>
+			<p class="col_h">140</p>
+		</div>
+		<div class="tab_liist">
+			<p>6</p>
+			<p class="col_h">160</p>
+		</div>
+		<div class="tab_liist">
+			<p>7</p>
+			<p class="col_h">180</p>
+		</div>
+		<div class="tab_liist">
+			<p>8</p>
+			<p class="col_h">200</p>
+		</div>
+	</div>
+</div>
+<div class="explain">
+	<h1>签到规则说明</h1>
+	<p>1.连续签到不足7天时，签到奖励将清零重新计算</p>
+	<p>2.签到奖励的金币可以在个人中心我的金币中兑换人民币</p>
+	<p>3.最终解释权归秒赚大钱所有</p>
+</div>
+<script type="text/javascript">
+	$(".sign_btn").click(function(){
+		$(this).css({"background":"#fdb062"});
+		var val=$(this).find("a").html("已签到");
+	})
+</script>
+</body> 
+</html> 

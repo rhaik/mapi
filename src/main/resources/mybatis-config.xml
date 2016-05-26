@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE configuration PUBLIC "-/mybatis.org//DTD Config 3.0//EN"    
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="false" />
+		<setting name="useGeneratedKeys" value="true" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias alias="idWithTimeMaker" type="com.cyhd.service.dao.po.IdWithTimeMaker" />
+		<typeAlias alias="deviceDo" type="com.cyhd.service.dao.po.Device" />
+		<typeAlias alias="autoCallRecordDo" type="com.cyhd.service.dao.po.AutoCallRecord" />
+		<typeAlias alias="mobileCodeDo" type="com.cyhd.service.dao.po.MobileCode" />
+		<typeAlias alias="userTask" type="com.cyhd.service.dao.po.UserTask" />
+		<typeAlias alias="properties" type="com.cyhd.service.dao.po.Properties" />
+		<typeAlias alias="userBanner" type="com.cyhd.service.dao.po.UserBanner" />
+	</typeAliases>
+
+</configuration>

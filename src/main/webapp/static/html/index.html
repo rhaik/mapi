@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="cyhd" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>发现-猎奇赚钱</title> 
+        <link rel="stylesheet" type="text/css" href=" ../frozenui/1.2.1/css/frozen.css">
+        <style>
+			.ui-tab-nav{padding-top:10px;height:60px;}
+			.ui-tab-nav li{font-size:18px;}
+			.ui-tab-nav li.current {height:50px; color: #e90010;border-bottom:0;}
+			.ui-badge-wrap{width: 50%;line-height: 30px;}
+			.font_size{font-size:20px;}
+		</style>
+        <script src="https://lib.sinaapp.com/js/zepto/1.0/zepto.min.js"></script>
+        <script src="../frozenjs/1.0.1/frozen.js"></script> 
+    </head>
+<body> 
+<div class="ui-tab">
+	<ul class="ui-tab-nav ui-border-b ui-border-t">
+	    <li class="current" >昨日累积</li>
+	    <li>最近七天</li>
+	    <li>最近30天</li>
+	</ul>
+	<ul class="ui-tab-content" style="margin-top:60px;width: 300%;">
+		<li> 
+			<ul class="ui-list ui-list-text">
+			   <li class="ui-border-t" style="padding: 20px 25px 5px 0px;">
+			        <div class="ui-badge-wrap">应用试用</div>
+			        <div class="ui-badge-wrap">邀请分成</div>
+			    </li>
+				<li style="padding: 5px 25px 25px 0px;">
+			        <div class="ui-badge-wrap">￥<span class="font_size"></span></div>
+			        <div class="ui-badge-wrap">￥<span class="font_size"></span></div>
+			    </li>
+			</ul>
+		</li>
+		<li> 
+			<ul class="ui-list ui-list-text">
+			   <li class="ui-border-t" style="padding: 20px 25px 5px 0px;">
+			        <div class="ui-badge-wrap">应用试用</div>
+			        <div class="ui-badge-wrap">邀请分成</div>
+			    </li>
+				<li style="padding: 5px 25px 25px 0px;">
+			        <div class="ui-badge-wrap">￥<span class="font_size"></span></div>
+			        <div class="ui-badge-wrap">￥<span class="font_size"></span></div>
+			    </li>
+			</ul>
+		</li>
+		<li> 
+			<ul class="ui-list ui-list-text">
+			   <li class="ui-border-t"  style="padding: 20px 25px 5px 0px;">
+			        <div class="ui-badge-wrap">应用试用</div>
+			        <div class="ui-badge-wrap">邀请分成</div>
+			    </li>
+				<li style="padding: 5px 25px 25px 0px;">
+			        <div class="ui-badge-wrap">￥<span class="font_size"></span></div>
+			        <div class="ui-badge-wrap">￥<span class="font_size"></span></div>
+			    </li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<ul class="ui-list ui-list-text ui-border-t ui-border-b" style="margin-top:30px;" >
+    <li class="ui-center" style="width:auto;height:50px;">
+    	<div class="ui-border-b ui-center" style="width:96%;height:100%;line-height:100%;font-size:20px;">账户概览</div>
+    </li>
+     <li style="padding: 4px 25px 5px 0px;">
+        <div class="ui-badge-wrap">本月收入</div>
+        <div class="ui-badge-wrap">上月收入</div>
+    </li>
+	<li style="padding: 5px 25px 5px 0px;">
+        <div class="ui-badge-wrap">￥<span class="font_size"></span></div>
+        <div class="ui-badge-wrap">￥<span class="font_size"></span></div>
+    </li>
+	<li style="padding: 10px 25px 5px 0px;">
+        <div class="ui-badge-wrap">账户余额</div> 
+    </li>
+	<li style="padding: 5px 25px 25px 0px;">
+        <div class="ui-badge-wrap">￥<span class="font_size"></span></div> 
+    </li>
+</ul>
+<script>
+    window.addEventListener('load', function(){
+	    var tab = new fz.Scroll('.ui-tab', {
+	        role: 'tab',
+	        autoplay: false,
+	    });
+	
+	    tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+	        console.log(fromIndex, toIndex)
+	    });
+	
+	    tab.on('scrollEnd', function() {
+	        console.log('end')
+	    });
+   })    
+</script>
+</body>
+</html>

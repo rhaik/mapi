@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<title>编辑收货地址</title> 
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/duobao.css">
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<body>
+<!-- 中间内容 -->   
+<div class="content_box">
+    <div class="edit">
+        <p><input type="text" placeholder="收货人" /></p>
+        <p><input type="text" placeholder="联系方式" /></p>
+        <p class="select">
+            <select id="province-select"></select>
+        </p>
+        <p class="select">
+            <select id="city-select"></select>
+        </p>
+        <p class="select">
+            <select id="area-select"></select>
+        </p>
+        <div class="address_ipt"><textarea placeholder="详细地址" onpropertychange="this.style.height=this.scrollHeight+'px';" oninput="this.style.height=this.scrollHeight+'px';" style="overflow-y:hidden;"></textarea></div>
+    </div>
+    <div class="set clearfix">
+        <span>设为常用收货地址</span>
+        <em class="on"><a></a></em>
+    </div>
+    <div class="tishi">用户填写收货地址后，方可发货，最多可添加三个收货地址</div>
+</div>
+<!-- 底部按钮 -->
+<div class="posi_btn">
+    <a class="on">确定</a>
+</div>
+<script type="text/javascript">
+    $(".set em").on('click',function(){
+        if(!$(this).hasClass("on")){
+            $(this).addClass("on");
+        }else{ 
+            $(this).removeClass("on")
+        }
+    });
+    $('.right_btn').click(function(){
+        $('.popup_bg').show();
+    })
+    $('.cancel').click(function(){
+        $('.popup_bg').hide();
+    })
+    $('.confirm').click(function(){
+        window.location = "../duobao/AddressList.html";
+    })
+</script>
+</body> 
+</html> 
